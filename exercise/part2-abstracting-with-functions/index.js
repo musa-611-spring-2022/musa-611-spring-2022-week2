@@ -53,9 +53,12 @@ map. Your function should take three arguments in this order:
   2. lng,
   3. name.
 
-Now, instead of using L.marker directly, use your function to add your places to
+  Now, instead of using L.marker directly, use your function to add your places to
 the map.
 
+const addPlace = (lat,lng,name) => {
+  L.marker([lat, lng]).bindTooltip(name).addTo(foodMap);
+};
 
 ## Task 4: Add your favorite places to play in Philadelphia
 
@@ -73,12 +76,21 @@ arguments in this order:
 Now use the addPlace function to add your three favorite places to play
 (whatever that means to you) in Philadelphia.
 
+
 ## Stretch Task: Use custom icons
 
 Using the Leaflet documentation (https://leafletjs.com/), try to set up your
 maps to use custom icons on your markers.
 
 ===================== */
+const MYICON = L.icon({
+  iconUrl: 'LOVE.jpeg',
+
+  iconSize: [38, 38], // size of the icon
+  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+  popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
+});
+
 
 const foodMap = L.map('food-map', {
   center: [39.9522, -75.1639],
@@ -112,7 +124,21 @@ Start code
 
 ===================== */
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+
+
+
+const addPlace = (map, lat, lng, name) => {
+  L.marker([lat, lng], { icon: MYICON }).bindTooltip(name).addTo(map);
+};
+
+addPlace(foodMap, 39.955057639538644, -75.1999076041219, 'Bonchon University City');
+addPlace(foodMap, 39.95586300169999, -75.20169401869971, 'Dim Sum House');
+addPlace(foodMap, 39.954689970693416, -75.2022096064104, 'TERAKAWA RAMEN');
+addPlace(foodMap, 39.95402209509364, -75.20035100005465, 'Starbucks');
+
+addPlace(playMap, 39.94899570854391, -75.15007781193802, 'Independence Hall');
+addPlace(playMap, 39.96575056337696, -75.18098755206788, 'Philadelphia Museum of Art');
+addPlace(playMap, 39.949403655214276, -75.19130262174758, 'Penn Museum');
 
 /* =====================
 

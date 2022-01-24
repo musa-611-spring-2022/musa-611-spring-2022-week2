@@ -145,6 +145,8 @@ const logSkyColor = () => {
   console.log(color); // blue
 };
 
+var keyword can spread the variable in the funtcion or module...
+
 logSkyColor(); // blue
 console.log(color); // ReferenceError
 ```

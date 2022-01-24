@@ -64,4 +64,8 @@ When you submit your pull request, your code will be linted and tested automatic
 >
 > # Run the tests
 > npx jest
+> npx jest __tests__/test_part2.js
+> 
+> # webserver
+> npx http-server --port8000
 >  ```
