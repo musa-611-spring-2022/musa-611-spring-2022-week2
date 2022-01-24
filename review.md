@@ -71,7 +71,7 @@ typeof temperature === 'number';
 let itIsSnowing = true;
 let temerature = 15;
 
-if (isItSnowing) {
+if (itIsSnowing) {
   console.log('It is snowing! How lovely. Grab your sled!');
 } else if (temperature < 50) {
   console.log('Seems a little chilly. Find the nearest heater and curl up with a book.')
