@@ -116,9 +116,23 @@ Start code
 // L.marker([39.95542870079189, -75.15673736945075]).bindTooltip('My Location').addTo(foodMap);
 // L.marker([39.95338973249398, -75.1950493897427]).bindTooltip('My Location').addTo(foodMap);
 
+var strawberryIcon = L.icon({
+    iconUrl: './images/strawberry_icon.png',
+    // shadowUrl: 'leaf-shadow.png',
+
+
+    iconSize:     [20, 20], // size of the icon
+    // shadowSize:   [50, 64], // size of the shadow
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    // shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
+});
+
 const addPlace = (map, lat, lng, name) => {
-  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+  L.marker([lat, lng], {icon: strawberryIcon}).bindTooltip(name).addTo(map).bindPopup("This is a pink strawberry marker!!");
 }
+
+
 
 // Add three places to foodMap
 addPlace(foodMap, 39.95312468852222, -75.21198823609751, "Don Barriga");
