@@ -116,7 +116,7 @@ L.marker([39.96072280414843, -75.17013324247141]).bindTooltip('Gyu-Kaku Japanese
 L.marker([39.95361202516225, -75.15541735854431]).bindTooltip('EMei Restaurant').addTo(foodMap);
 L.marker([39.95463461771335, -75.15616484818501]).bindTooltip('Tai Lake').addTo(foodMap);
 
-function addPlace(map, lat, lng, name){
+function addPlace(map, lat, lng, name) {
   L.marker([lat, lng]).bindTooltip(name).addTo(map);
 }
 
