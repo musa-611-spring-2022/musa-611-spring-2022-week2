@@ -76,7 +76,7 @@ Now use the addPlace function to add your three favorite places to play
 ===================== */
 
 const foodMap = L.map('food-map', {
-  center: [39.9522, -75.1639],
+  center: [39.9553, -75.1980],
   zoom: 14,
 });
 
@@ -89,7 +89,7 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 }).addTo(foodMap);
 
 const playMap = L.map('play-map', {
-  center: [39.9522, -75.1639],
+  center: [39.9553, -75.1980],
   zoom: 14,
 });
 
@@ -106,8 +106,15 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 Start code
 
 ===================== */
+let addPlace = function (map, lat, lng, name) {
+  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+}
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+addPlace(foodMap, 39.9556976307943, -75.20173788070679, 'Dim Sum');
+addPlace(foodMap, 39.95251997218897, -75.19232198596, 'The Best Tackle');
+addPlace(foodMap, 39.954046623753285, -75.19751608371735, 'Chinese food truck');
+
+addPlace(playMap, 39.9553, -75.1980, 'My Home');
 
 /* =====================
 
