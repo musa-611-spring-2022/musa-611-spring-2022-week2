@@ -10,10 +10,10 @@ log to test the results.
 
 ===================== */
 
-let a = 3e1000;
+let a = 35;
 const resultTask1 = (a > 30);
 
-let b = " ";
+let b = ' ';
 const resultTask2 = (typeof b === 'string');
 
 let c = 1;
