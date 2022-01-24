@@ -112,7 +112,7 @@ Start code
 
 ===================== */
 
- const addPlace = (name, lat, lng, map) =>{L.marker([lat, lng]).bindTooltip(name).addTo(map)};
+const addPlace = (name, lat, lng, map) =>{L.marker([lat, lng]).bindTooltip(name).addTo(map)};
 
 addPlace('EMei Restaurant', 39.95363848044654, -75.15542870921058, foodMap);
 addPlace('LaTao&CrabbyCrab', 39.95530176339542, -75.19754267369555, foodMap);
