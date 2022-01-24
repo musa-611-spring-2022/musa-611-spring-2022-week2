@@ -106,7 +106,7 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 Start code
 
 ===================== */
-function addPlace(map, lat, lng, name){
+function addPlace(map, lat, lng, name) {
   L.marker([lat, lng]).bindTooltip(name).addTo(map);
 }
 
