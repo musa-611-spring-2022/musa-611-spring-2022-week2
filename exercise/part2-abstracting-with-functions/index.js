@@ -112,7 +112,16 @@ Start code
 
 ===================== */
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+L.marker([39.96072280414843, -75.17013324247141]).bindTooltip('Gyu-Kaku Japanese BBQ').addTo(foodMap);
+L.marker([39.95361202516225, -75.15541735854431]).bindTooltip('EMei Restaurant').addTo(foodMap);
+L.marker([39.95463461771335, -75.15616484818501]).bindTooltip('Tai Lake').addTo(foodMap);
+
+function addPlace(map, lat, lng, name){
+  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+}
+
+addPlace(playMap,39.96557351829277, -75.1809653049339,'Philadelphia Museum of Art')
+addPlace(playMap,39.968336360831735, -75.17265881979894,'Eastern State Penitentiary')
 
 /* =====================
 
