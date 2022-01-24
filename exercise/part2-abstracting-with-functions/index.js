@@ -116,14 +116,14 @@ Start code
 L.marker([39.953154, -75.156851]).bindTooltip('Happy Lamb').addTo(foodMap);
 L.marker([39.953604, -75.175432]).bindTooltip('Double Knot').addTo(foodMap);
 
-function addPlace (lat, lon, name) {
+function addPlace(lat, lon, name) {
   return L.marker([lat, lon]).bindTooltip(name).addTo(foodMap);
 }
 addPlace(39.949683, -75.162188, 'Pho Street');
 
 // Task 4
 
-function addPlace4 (map, lat, lon, name) {
+function addPlace4(map, lat, lon, name) {
   return L.marker([lat, lon]).bindTooltip(name).addTo(map);
 }
 addPlace4(playMap, 39.975506, -75.192760, 'Northeast Corridor Schuykill Bridge');
