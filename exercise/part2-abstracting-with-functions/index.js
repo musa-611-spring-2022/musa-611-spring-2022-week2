@@ -106,12 +106,12 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
   ext: 'png',
 }).addTo(playMap);
 
-var heartIcon = L.icon({
-    iconUrl: 'C:/Users/Marlana/Desktop/Spring Semester/MUSA 611/hearticon.png',
+const heartIcon = L.icon({
+  iconUrl: 'C:/Users/Marlana/Desktop/Spring Semester/MUSA 611/hearticon.png',
 
-    iconSize:     [25, 28], // size of the icon
-    iconAnchor:   [0, 0], // point of the icon which will correspond to marker's location
-    popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
+  iconSize:    [25, 28], // size of the icon
+  iconAnchor:  [0, 0], // point of the icon which will correspond to marker's location
+  popupAnchor: [0, 0], // point from which the popup should open relative to the iconAnchor
 });
 
 /* =====================
@@ -120,20 +120,17 @@ Start code
 
 ===================== */
 
-function addPlace(map, lat, lng, name){
+function addPlace(map, lat, lng, name) {
   L.marker([lat, lng], {icon: heartIcon}).bindTooltip(name).addTo(map);
 };
 
-addPlace(foodMap, 39.93808999843309, -75.14647808588512, 'Royal Sushi & Izakaya')
-addPlace(foodMap, 39.94916655193396, -75.21315492749963, 'Alif Brew & Mini Mart')
-addPlace(foodMap, 40.034029606088595, -75.17185137484253, 'Uncle Bobbie\'s Coffee & Books')
-addPlace(playMap, 39.943959186573004, -75.16756268654512, 'Bob and Barbara\'s Lounge')
-addPlace(playMap, 39.9546654827162, -75.21193426655311, 'The Second Mile Center')
-addPlace(playMap, 39.93845732579879, -75.15786982389214, '9th Street Italian Market')
+addPlace(foodMap, 39.93808999843309, -75.14647808588512, 'Royal Sushi & Izakaya');
+addPlace(foodMap, 39.94916655193396, -75.21315492749963, 'Alif Brew & Mini Mart');
+addPlace(foodMap, 40.034029606088595, -75.17185137484253, 'Uncle Bobbie\'s Coffee & Books');
+addPlace(playMap, 39.943959186573004, -75.16756268654512, 'Bob and Barbara\'s Lounge');
+addPlace(playMap, 39.9546654827162, -75.21193426655311, 'The Second Mile Center');
+addPlace(playMap, 39.93845732579879, -75.15786982389214, '9th Street Italian Market');
 
-// L.marker([39.93808999843309, -75.14647808588512]).bindTooltip('Royal Sushi & Izakaya').addTo(foodMap);
-// L.marker([39.94916655193396, -75.21315492749963]).bindTooltip('Alif Brew & Mini Mart').addTo(foodMap);
-// L.marker([40.034029606088595, -75.17185137484253]).bindTooltip('Uncle Bobbie\'s Coffee & Books').addTo(foodMap);
 
 /* =====================
 
