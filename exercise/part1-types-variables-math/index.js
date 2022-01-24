@@ -16,12 +16,11 @@ const resultTask1 = (a > 30);
 let b = 'Lala';
 const resultTask2 = (typeof b === 'string');
 
-let c;
+let c = 1;
 const dataTask3 = ['peach', 'plum', 'pear'];
-c = dataTask3.length -2
 const resultTask3 = (dataTask3[c] === 'plum');
 
-let d = 'cassiopeia'.length;
+let d = 10;
 const resultTask4 = (d === 'cassiopeia'.length);
 
 let e = 8;
