@@ -120,11 +120,11 @@ L.marker([39.95309042323159, -75.19053510642438]).bindTooltip('Hill College Hous
 L.marker([39.95549395545588, -75.15801782243038]).bindTooltip('Chinatown').addTo(foodMap);
 
 // task 3
-function addPlace(lat,lng,name){
+function addPlace1(lat,lng,name){
   L.marker([lat, lng]).bindTooltip(name).addTo(foodMap);
 }
 
-addPlace(playMap,39.953090423255159, -75.19053510642558, "IDK");
+addPlace1(39.953090423255159, -75.19053510642558, 'IDK');
 
 
 // task 4
@@ -133,7 +133,7 @@ function addPlace(map, lat,lng,name){
   L.marker([lat, lng]).bindTooltip(name).addTo(map);
 }
 
-addPlace(playMap,39.953090422324,-75.158017899999, "IDK");
+addPlace(playMap,39.953090422324,-75.158017899999, 'IDK');
 
 /* =====================
 
