@@ -5,10 +5,10 @@ beforeAll(async () => {
   output = '';
 
   page.on('console', (msg) => {
-    output += msg.text() + '\n';
-  })
+    output += `${msg.text()}\n`;
+  });
   await page.goto('http://localhost:8000/lab/lab1/part2-fizzbuzz/');
-  console.log(output)
+  console.log(output);
 });
 
 describe('The console output', () => {

@@ -21,4 +21,4 @@ jobs:
     - name: Run jest
       run: |
         npx http-server --silent --port 8000 &
-        npx jest lab/part1/ --color=true
+        npx jest lab/part1-types-variables-math/ --color=true

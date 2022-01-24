@@ -13,21 +13,19 @@
   },
   "eslintConfig": {
     "extends": "airbnb",
+    "globals": {
+      "L": "readonly"
+    },
     "rules": {
       "no-console": "off",
-      "no-plusplus": "off"
+      "no-plusplus": "off",
+      "no-multiple-empty-lines": "off"
     },
     "overrides": [
       {
         "files": ["lab/lab1/part1*/*.js"],
         "rules": {
           "prefer-const": "off"
-        }
-      },
-      {
-        "files": ["lab/lab1/part2*/*.js"],
-        "rules": {
-          "no-multiple-empty-lines": "off"
         }
       }
     ]
