@@ -79,6 +79,16 @@ Using the Leaflet documentation (https://leafletjs.com/), try to set up your
 maps to use custom icons on your markers.
 
 ===================== */
+const redIcon = L.icon({
+  iconUrl: 'marker-icon-red.png',
+  shadowUrl: 'marker-shadow.png',
+
+  iconSize:[30, 50], // size of the icon
+  shadowSize:[50, 64], // size of the shadow
+  iconAnchor:[18, 45], // point of the icon which will correspond to marker's location
+  shadowAnchor:[20, 60],  // the same for the shadow
+  popupAnchor:[-3, -76], // point from which the popup should open relative to the iconAnchor
+});
 
 const foodMap = L.map('food-map', {
   center: [39.9522, -75.1639],
@@ -111,20 +121,11 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 Start code
 
 ===================== */
-var redIcon = L.icon( {
-  iconUrl: 'marker-icon-red.png',
-  shadowUrl: 'marker-shadow.png',
 
-  iconSize:     [30, 50], // size of the icon
-  shadowSize:   [50, 64], // size of the shadow
-  iconAnchor:   [18, 45], // point of the icon which will correspond to marker's location
-  shadowAnchor: [20, 60],  // the same for the shadow
-  popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-} );
 
 function addPlace(map, lat, lng, name) {
-  L.marker([lng, lat], {icon: redIcon}).bindTooltip(name).addTo(map);
-};
+  L.marker([lng, lat], { icon: redIcon }).bindTooltip(name).addTo(map);
+}
 
 addPlace(foodMap, -75.18334540889158, 39.953105126349925, 'Evo Philly');
 addPlace(foodMap, -75.16634269031096, 39.95108283407554, 'Popeyes');
