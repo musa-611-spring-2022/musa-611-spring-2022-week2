@@ -1,13 +1,9 @@
 /* =====================
-
 # Exercise: Types, Variables, Math
-
 ## Introduction
-
 Change variables a through e below so that resultTask1 through resultTask5
 evaluate as true. When you are finished, check your browser's console
 log to test the results.
-
 ===================== */
 
 let a = 31;
@@ -23,13 +19,11 @@ const resultTask3 = (dataTask3[c] === 'plum');
 let d = 10;
 const resultTask4 = (d === 'cassiopeia'.length);
 
-let e = 8;
+let e = 18;
 const resultTask5 = (e % 5 === 3);
 
 /* =====================
-
 Tests (all should report success)
-
 ===================== */
 
 const taskResults = [
