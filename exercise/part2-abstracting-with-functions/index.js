@@ -116,15 +116,19 @@ Start code
 L.marker([39.953154, -75.156851]).bindTooltip('Happy Lamb').addTo(foodMap);
 L.marker([39.953604, -75.175432]).bindTooltip('Double Knot').addTo(foodMap);
 
+function addPlace (lat, lon, name) {
+  return L.marker([lat, lon]).bindTooltip(name).addTo(foodMap);
+}
+addPlace(39.949683, -75.162188, 'Pho Street');
 
-function addPlace (map, lat, lon, name) {
+// Task 4
+
+function addPlace4 (map, lat, lon, name) {
   return L.marker([lat, lon]).bindTooltip(name).addTo(map);
 }
-addPlace(foodMap, 39.949683, -75.162188, 'Pho Street');
-
-addPlace(playMap, 39.975506, -75.192760, 'Northeast Corridor Schuykill Bridge');
-addPlace(playMap, 40.002786, -75.273100, 'SEPTA Ardmore Station');
-addPlace(playMap, 39.961376, -75.262561, 'H-Mart Upper Darby');
+addPlace4(playMap, 39.975506, -75.192760, 'Northeast Corridor Schuykill Bridge');
+addPlace4(playMap, 40.002786, -75.273100, 'SEPTA Ardmore Station');
+addPlace4(playMap, 39.961376, -75.262561, 'H-Mart Upper Darby');
 
 /* =====================
 
