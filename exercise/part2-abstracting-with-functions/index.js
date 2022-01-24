@@ -112,7 +112,9 @@ Start code
 
 ===================== */
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+L.marker([39.93227222482403, -75.16106629872182]).bindTooltip('Triangle Tavern').addTo(foodMap);
+L.marker([39.953606980487194, -75.15582054989262]).bindTooltip('Chu Shang Spicy').addTo(foodMap);
+L.marker([39.94676587494185, -75.1622357808715]).bindTooltip('Monster Vegan').addTo(foodMap);
 
 /* =====================
 
