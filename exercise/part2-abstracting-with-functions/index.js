@@ -125,10 +125,10 @@ addPlace(39.9584, -75.2003, 'Bonchon'); */
 
 
 const marker = L.icon({
-    iconUrl: 'cafe.png',
-    iconSize:     [30, 30], // size of the icon
-    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+  iconUrl: 'cafe.png',
+  iconSize: [30, 30], // size of the icon
+  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+  popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
 });
 
 
@@ -147,7 +147,7 @@ function addPlace(map, lat, lng, name) {
 
 addPlace(foodMap, 39.9536, -75.1929, 'White Dog Cafe');
 addPlace(foodMap, 39.9554, -75.1995, 'NAM Vietnamese Kitchen');
-addPlace(foodMap, 39.9584, -75.2003, 'Bonchon',);
+addPlace(foodMap, 39.9584, -75.2003, 'Bonchon');
 
 addPlace(playMap, 39.9578, -75.2067, 'Home');
 addPlace(playMap, 39.9489, -75.1396, 'PennsLanding');
