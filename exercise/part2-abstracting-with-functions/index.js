@@ -73,6 +73,11 @@ arguments in this order:
 Now use the addPlace function to add your three favorite places to play
 (whatever that means to you) in Philadelphia.
 
+## Stretch Task: Use custom icons
+
+Using the Leaflet documentation (https://leafletjs.com/), try to set up your
+maps to use custom icons on your markers.
+
 ===================== */
 
 const foodMap = L.map('food-map', {
