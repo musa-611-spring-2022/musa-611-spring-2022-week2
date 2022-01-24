@@ -81,8 +81,8 @@ maps to use custom icons on your markers.
 ===================== */
 
 const foodMap = L.map('food-map', {
-  center: [39.9522, -75.1639],
-  zoom: 14,
+  center: [40.04389139038451, -75.39526462554932],
+  zoom: 6,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
@@ -94,8 +94,8 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 }).addTo(foodMap);
 
 const playMap = L.map('play-map', {
-  center: [39.9522, -75.1639],
-  zoom: 14,
+  center: [40.00079396953218, -75.27076721191406],
+  zoom: 11,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
@@ -112,7 +112,23 @@ Start code
 
 ===================== */
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+// L.marker([40.45071088979802, -79.98556092381476]).bindTooltip('Primanti Bros, Original Location').addTo(foodMap);
+// L.marker([40.04389139038451, -75.39526462554932]).bindTooltip("Minella's Diner").addTo(foodMap);
+// L.marker([41.71571201183046, -73.92983436584473]).bindTooltip("Palace Diner").addTo(foodMap);
+
+function addPlace (map, lat, lng, name) {
+  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+}
+
+// Add markers to foodMap
+addPlace(foodMap, 40.45071088979802, -79.98556092381476, 'Primanti Bros, Original Location');
+addPlace(foodMap, 40.04389139038451, -75.39526462554932, "Minella's Diner");
+addPlace(foodMap, 41.71571201183046, -73.92983436584473, "Palace Diner");
+
+// Add markers to playMap
+addPlace(playMap, 40.10463173609721, -75.32953977584839, 'Reach Climbing and Fitness');
+addPlace(playMap, 39.95828200388112, -75.1731026172638, "The Franklin Institute");
+addPlace(playMap, 39.95678937071908, -75.1712304353714, "The Academy of Natural Sciences");
 
 /* =====================
 
