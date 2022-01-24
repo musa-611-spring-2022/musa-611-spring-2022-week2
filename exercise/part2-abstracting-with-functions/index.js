@@ -83,11 +83,11 @@ const redIcon = L.icon({
   iconUrl: 'marker-icon-red.png',
   shadowUrl: 'marker-shadow.png',
 
-  iconSize:[30, 50], // size of the icon
-  shadowSize:[50, 64], // size of the shadow
-  iconAnchor:[18, 45], // point of the icon which will correspond to marker's location
-  shadowAnchor:[20, 60],  // the same for the shadow
-  popupAnchor:[-3, -76], // point from which the popup should open relative to the iconAnchor
+  iconSize: [30, 50], // size of the icon
+  shadowSize: [50, 64], // size of the shadow
+  iconAnchor: [18, 45], // point of the icon which will correspond to marker's location
+  shadowAnchor: [20, 60], // the same for the shadow
+  popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
 });
 
 const foodMap = L.map('food-map', {
