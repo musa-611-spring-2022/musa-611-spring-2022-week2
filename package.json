@@ -12,6 +12,24 @@
     "preset": "jest-puppeteer"
   },
   "eslintConfig": {
-    "extends": "airbnb"
+    "extends": "airbnb",
+    "rules": {
+      "no-console": "off",
+      "no-plusplus": "off"
+    },
+    "overrides": [
+      {
+        "files": ["lab/lab1/part1*/*.js"],
+        "rules": {
+          "prefer-const": "off"
+        }
+      },
+      {
+        "files": ["lab/lab1/part2*/*.js"],
+        "rules": {
+          "no-multiple-empty-lines": "off"
+        }
+      }
+    ]
   }
 }
