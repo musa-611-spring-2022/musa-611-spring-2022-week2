@@ -35,7 +35,7 @@ x ? console.log('1st message') : console.log('2nd message')
 7
 ```
 
-Note that the set of all expressions is a subset of the set of all statements.
+Note that the set of all expressions is a subset of the set of all statements. You can read more about the different categories of statements and expressions in the article [JavaScript Expressions and Statements](https://medium.com/launch-school/javascript-expressions-and-statements-4d32ac9c0e74).
 
 ### Variables
 ```js
