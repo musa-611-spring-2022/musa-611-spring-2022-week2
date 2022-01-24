@@ -82,7 +82,7 @@ maps to use custom icons on your markers.
 
 const foodMap = L.map('food-map', {
   center: [39.9522, -75.1639],
-  zoom: 14,
+  zoom: 13,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
@@ -95,7 +95,7 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 
 const playMap = L.map('play-map', {
   center: [39.9522, -75.1639],
-  zoom: 14,
+  zoom: 13,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
@@ -111,10 +111,19 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 Start code
 
 ===================== */
+const addPlace = (name, lat, lng, map) =>{L.marker([lat, lng]).bindTooltip(name).addTo(map);};
 
-L.marker([39.95363848044654, -75.15542870921058]).bindTooltip('EMei Restaurant').addTo(foodMap);
-L.marker([39.95530176339542, -75.19754267369555]).bindTooltip('LaTao&CrabbyCrab').addTo(foodMap);
-L.marker([39.95579760487797, -75.20169724806053]).bindTooltip('Dim Sum House by Jane G').addTo(foodMap);
+addPlace('EMei Restaurant', 39.95363848044654, -75.15542870921058, foodMap);
+addPlace('LaTao&CrabbyCrab', 39.95530176339542, -75.19754267369555, foodMap);
+addPlace('Dim Sum House by Jane G', 39.95579760487797, -75.20169724806053, foodMap);
+
+addPlace('Philadelphia Zoo', 39.97210288922859, -75.19628153169741, playMap);
+addPlace('Philadelphia City Hall', 39.95305684435142, -75.16359966183659, playMap);
+addPlace('Philadelphia Museum of Art', 39.965323242378865, -75.1807583964075,  playMap);
+
+
+
+
 
 /* =====================
 
