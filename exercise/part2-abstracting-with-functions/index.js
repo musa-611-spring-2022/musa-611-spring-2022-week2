@@ -113,16 +113,16 @@ Start code
 ===================== */
 
 function addPlace(map, lat, lng, name) {
-  L.marker([lat,lng]).bindTooltip(name).addTo(map)
+  L.marker([lat, lng]).bindTooltip(name).addTo(map);
 }
 
-addPlace(foodMap,39.936287,-75.161943,'Pho Ga Thanh Thanh');
-addPlace(foodMap,39.955014,-75.211542,'Manakeesh');
-addPlace(foodMap,40.122697,-75.016263,'Uzbekistan');
+addPlace(foodMap, 39.936287, -75.161943, 'Pho Ga Thanh Thanh');
+addPlace(foodMap, 39.955014, -75.211542, 'Manakeesh');
+addPlace(foodMap, 40.122697, -75.016263, 'Uzbekistan');
 
-addPlace(playMap,39.946781,-75.16600,'Kimmel Center');
-addPlace(playMap,39.952819,-75.18584,'Highline Field');
-addPlace(playMap,40.051303,-75.21407,'Devil\'s Pool')
+addPlace(playMap, 39.946781, -75.16600, 'Kimmel Center');
+addPlace(playMap, 39.952819, -75.18584, 'Highline Field');
+addPlace(playMap, 40.051303, -75.21407, 'Devil\'s Pool');
 
 /* =====================
 
