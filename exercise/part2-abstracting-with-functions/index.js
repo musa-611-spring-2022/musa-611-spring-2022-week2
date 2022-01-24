@@ -112,7 +112,9 @@ Start code
 
 ===================== */
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+L.marker([39.95363848044654, -75.15542870921058]).bindTooltip('EMei Restaurant').addTo(foodMap);
+L.marker([39.95530176339542, -75.19754267369555]).bindTooltip('LaTao&CrabbyCrab').addTo(foodMap);
+L.marker([39.95579760487797, -75.20169724806053]).bindTooltip('Dim Sum House by Jane G').addTo(foodMap);
 
 /* =====================
 
