@@ -16,7 +16,7 @@ const resultTask1 = (a > 30);
 let b = 'I am a string';
 const resultTask2 = (typeof b === 'string');
 
-let c = 2;
+let c = 1;
 const dataTask3 = ['peach', 'plum', 'pear'];
 const resultTask3 = (dataTask3[c] === 'plum');
 
