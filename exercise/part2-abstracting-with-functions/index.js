@@ -120,8 +120,9 @@ function addPlace(map, lat, lng, name){
   L.marker([lat, lng]).bindTooltip(name).addTo(map);
 }
 
-addPlace(playMap,39.96557351829277, -75.1809653049339,'Philadelphia Museum of Art')
-addPlace(playMap,39.968336360831735, -75.17265881979894,'Eastern State Penitentiary')
+addPlace(playMap, 39.96557351829277, -75.1809653049339, 'Philadelphia Museum of Art');
+addPlace(playMap, 39.968336360831735, -75.17265881979894, 'Eastern State Penitentiary');
+addPlace(playMap, 39.95276938743712, -75.1634998158793, 'Philadelphia City Hall');
 
 /* =====================
 
