@@ -94,8 +94,8 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 }).addTo(foodMap);
 
 const playMap = L.map('play-map', {
-  center: [39.9522, -75.1639],
-  zoom: 14,
+  center: [39.9581, -75.2241],
+  zoom: 12,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
@@ -106,13 +106,25 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
   ext: 'png',
 }).addTo(playMap);
 
+
 /* =====================
 
 Start code
 
 ===================== */
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+L.marker([39.953154, -75.156851]).bindTooltip('Happy Lamb').addTo(foodMap);
+L.marker([39.953604, -75.175432]).bindTooltip('Double Knot').addTo(foodMap);
+
+
+function addPlace (map, lat, lon, name) {
+  return L.marker([lat, lon]).bindTooltip(name).addTo(map);
+}
+addPlace(foodMap, 39.949683, -75.162188, 'Pho Street');
+
+addPlace(playMap, 39.975506, -75.192760, 'Northeast Corridor Schuykill Bridge');
+addPlace(playMap, 40.002786, -75.273100, 'SEPTA Ardmore Station');
+addPlace(playMap, 39.961376, -75.262561, 'H-Mart Upper Darby');
 
 /* =====================
 
