@@ -113,7 +113,7 @@ Start code
 ===================== */
 
 //define function that will take lat, lng, and the name of the place to add to the foodMap
-const addPlace(lat, lng, name) {
+const addPlace = (lat, lng, name) => {
   L.marker([lat, lng]).bindTooltip(name).addTo(foodMap); 
 }
 
