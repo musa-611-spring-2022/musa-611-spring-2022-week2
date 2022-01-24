@@ -123,15 +123,15 @@ addPlace(39.9536, -75.1929, 'White Dog Cafe');
 addPlace(39.9554, -75.1995, 'NAM Vietnamese Kitchen');
 addPlace(39.9584, -75.2003, 'Bonchon'); */
 
-var LeafIcon = L.Icon.extend({
-    options: {
-        iconSize:     [30, 30],
-        iconAnchor:   [22, 94],
-        popupAnchor:  [-3, -76]
-    }
+
+var marker = L.icon({
+    iconUrl: 'cafe.png',
+
+    iconSize:     [30, 30], // size of the icon
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 });
 
-var pin = new LeafIcon({iconUrl: 'cafe.png'})
 
 /* var bonchonIcon = new LeafIcon({iconUrl: 'bonchon.png'}),
     namIcon = new LeafIcon({iconUrl: 'nam.png'}),
@@ -142,7 +142,7 @@ var pin = new LeafIcon({iconUrl: 'cafe.png'})
 
 
 function addPlace(map, lat, lng, name) {
-  L.marker([lat, lng], { icon: pin }).bindTooltip(name).addTo(map);
+  L.marker([lat, lng], { icon: marker }).bindTooltip(name).addTo(map);
 }
 
 
