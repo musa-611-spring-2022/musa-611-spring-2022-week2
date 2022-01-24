@@ -123,20 +123,6 @@ addPlace(39.9536, -75.1929, 'White Dog Cafe');
 addPlace(39.9554, -75.1995, 'NAM Vietnamese Kitchen');
 addPlace(39.9584, -75.2003, 'Bonchon'); */
 
-let bonchonIcon = L.icon({
-  iconUrl: 'bonchon.png',
-  iconSize: [30, 30], // size of the icon
-  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
-  popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
-});
-
-let namIcon = L.icon({
-  iconUrl: 'nam.png',
-  iconSize: [30, 30], // size of the icon
-  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
-  popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
-});
-
 let cafeIcon = L.icon({
   iconUrl: 'cafe.png',
   iconSize: [30, 30], // size of the icon
@@ -166,7 +152,7 @@ let commercialIcon = L.icon({
 });
 
 function addPlace(map, lat, lng, name, Icon) {
-  L.marker([lat, lng], { icon: Icon }).bindTooltip(name).addTo(map);
+  L.marker([lat, lng], { icon: ${Icon} }).bindTooltip(name).addTo(map);
 }
 
 
