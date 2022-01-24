@@ -1,7 +1,7 @@
 /* global describe, beforeAll, it, page, expect */
 
 beforeAll(async () => {
-  await page.goto('http://localhost:8000/lab/lab1/part1-types-variables-math/');
+  await page.goto('http://localhost:8000/exercise/part1-types-variables-math/');
 });
 
 describe('The variable `a`', () => {

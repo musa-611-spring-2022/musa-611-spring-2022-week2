@@ -21,4 +21,4 @@ jobs:
     - name: Run jest
       run: |
         npx http-server --silent --port 8000 &
-        npx jest lab/part2-abstracting-with-functions/ --color=true
+        npx jest exercise/part2-abstracting-with-functions/ --color=true

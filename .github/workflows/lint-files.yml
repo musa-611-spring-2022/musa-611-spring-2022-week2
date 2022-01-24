@@ -17,7 +17,7 @@ jobs:
         node-version: 16.x
         cache: 'npm'
     - name: Install dependencies
-      run: npm install --only=prod
+      run: npm install --only=dev
     - name: Run eslint
       run: |
-        npx eslint --color lab/
+        npx eslint --color exercise/
