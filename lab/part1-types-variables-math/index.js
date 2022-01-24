@@ -1,6 +1,6 @@
 /* =====================
 
-# Lab 1, Part 1 — Types, Variables, Math
+# Exercise: Types, Variables, Math
 
 ## Introduction
 
