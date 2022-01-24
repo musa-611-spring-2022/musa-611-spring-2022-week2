@@ -112,7 +112,24 @@ Start code
 
 ===================== */
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+// L.marker([39.95312468852222, -75.21198823609751]).bindTooltip('My Location').addTo(foodMap);
+// L.marker([39.95542870079189, -75.15673736945075]).bindTooltip('My Location').addTo(foodMap);
+// L.marker([39.95338973249398, -75.1950493897427]).bindTooltip('My Location').addTo(foodMap);
+
+const addPlace = (map, lat, lng, name) => {
+  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+}
+
+// Add three places to foodMap
+addPlace(foodMap, 39.95312468852222, -75.21198823609751, "Don Barriga");
+addPlace(foodMap, 39.95542870079189, -75.15673736945075, "Dim Sum Garden");
+addPlace(foodMap, 39.95338973249398, -75.1950493897427, "Starbucks");
+
+// Add three places to playMap
+addPlace(playMap, 39.949135823054654, -75.21042938273784, "Clark Park");
+addPlace(playMap, 39.96626042072945, -75.18113776143306, "Philadelphia Museum of Art");
+addPlace(playMap, 39.95649612534245, -75.1582223893249, "Chinatown");
+
 
 /* =====================
 
