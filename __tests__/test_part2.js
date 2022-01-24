@@ -1,7 +1,7 @@
 /* global describe, beforeAll, it, page, expect */
 
 beforeAll(async () => {
-  await page.goto('http://localhost:8000/exercise/part3-abstracting-with-functions/');
+  await page.goto('http://localhost:8000/exercise/part2-abstracting-with-functions/');
 });
 
 function getFoodPlaces() {
