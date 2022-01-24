@@ -31,7 +31,7 @@ const taskResults = [
   resultTask2,
   resultTask3,
   resultTask4,
-  resultTask5,
+  resultTask5, 
 ];
 function reportTaskSuccess(taskNumber) {
   const taskIdx = taskNumber - 1;
