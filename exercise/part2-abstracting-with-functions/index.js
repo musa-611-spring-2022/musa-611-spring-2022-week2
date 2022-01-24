@@ -111,7 +111,7 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 Start code
 
 ===================== */
-var redIcon = L.icon({
+var redIcon = L.icon( {
   iconUrl: 'marker-icon-red.png',
   shadowUrl: 'marker-shadow.png',
 
@@ -120,7 +120,11 @@ var redIcon = L.icon({
   iconAnchor:   [18, 45], // point of the icon which will correspond to marker's location
   shadowAnchor: [20, 60],  // the same for the shadow
   popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-});
+} );
+
+function addPlace(map, lat, lng, name) {
+  L.marker([lng, lat], {icon: redIcon}).bindTooltip(name).addTo(map);
+};
 
 addPlace(foodMap, -75.18334540889158, 39.953105126349925, 'Evo Philly');
 addPlace(foodMap, -75.16634269031096, 39.95108283407554, 'Popeyes');
@@ -130,9 +134,7 @@ addPlace(playMap, -75.16359699756435, 39.952765327294195, 'City Hall');
 addPlace(playMap, -75.16581676564111, 39.95423903304077, 'Love Park');
 addPlace(playMap, -75.18073712208721, 39.96544918560279, 'Museum of Art');
 
-function addPlace(map, lat, lng, name) {
-  L.marker([lng, lat], {icon: redIcon}).bindTooltip(name).addTo(map);
-}
+
 
 /* =====================
 
