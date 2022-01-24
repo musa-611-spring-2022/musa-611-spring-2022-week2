@@ -107,7 +107,17 @@ Start code
 
 ===================== */
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+const addPlace = (map, lat, lng, name) => {
+  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+};
+
+addPlace(foodMap, 39.9522, -75.1639, 'My Location');
+addPlace(foodMap, 39.9522, -75.1639, 'My Location');
+addPlace(foodMap, 39.9522, -75.1639, 'My Location');
+
+addPlace(playMap, 39.9522, -75.1639, 'My Location');
+addPlace(playMap, 39.9522, -75.1639, 'My Location');
+addPlace(playMap, 39.9522, -75.1639, 'My Location');
 
 /* =====================
 
