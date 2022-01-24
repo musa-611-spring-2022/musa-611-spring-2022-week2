@@ -165,18 +165,18 @@ let commercialIcon = L.icon({
   popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
 });
 
-function addPlace(Icon, map, lat, lng, name) {
-  L.marker([lat, lng], { icon: Icon }).bindTooltip(name).addTo(map);
+function addPlace(map, lat, lng, name) {
+  L.marker([lat, lng], { icon: pennIcon }).bindTooltip(name).addTo(map);
 }
 
 
-addPlace(cafeIcon, foodMap, 39.9536, -75.1929, 'White Dog Cafe');
-addPlace(namIcon, foodMap, 39.9554, -75.1995, 'NAM Vietnamese Kitchen');
-addPlace(bonchonIcon, foodMap, 39.9584, -75.2003, 'Bonchon');
+addPlace(foodMap, 39.9536, -75.1929, 'White Dog Cafe');
+addPlace(foodMap, 39.9554, -75.1995, 'NAM Vietnamese Kitchen');
+addPlace(foodMap, 39.9584, -75.2003, 'Bonchon');
 
-addPlace(homeIcon, playMap, 39.9578, -75.2067, 'Home');
-addPlace(pennIcon, playMap, 39.9489, -75.1396, 'PennsLanding');
-addPlace(commercialIcon, playMap, 39.9513, -75.1658, '15th Street');
+addPlace(playMap, 39.9578, -75.2067, 'Home');
+addPlace(playMap, 39.9489, -75.1396, 'PennsLanding');
+addPlace(playMap, 39.9513, -75.1658, '15th Street');
 
 /* =====================
 
