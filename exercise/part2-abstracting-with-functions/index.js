@@ -134,6 +134,9 @@ function addPlace(map, lat,lng,name){
 }
 
 addPlace(playMap,39.953090422324,-75.158017899999, 'IDK');
+addPlace(playMap,39.953090552324,-75.158017800999, 'IDK2');
+addPlace(playMap,39.953090552304,-75.158017800909, 'IDK3');
+
 
 /* =====================
 
