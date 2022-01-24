@@ -79,6 +79,10 @@ Using the Leaflet documentation (https://leafletjs.com/), try to set up your
 maps to use custom icons on your markers.
 
 ===================== */
+let myIcon = L.icon({
+  iconUrl: 'marker.png',
+  iconSize: [19, 48],
+});
 
 const foodMap = L.map('food-map', {
   center: [39.9522, -75.1639],
@@ -111,11 +115,6 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 Start code
 
 ===================== */
-var myIcon = L.icon({
-  iconUrl: 'marker.png',
-  iconSize: [19, 48],
-});
-
 
 L.marker([39.96072280414843, -75.17013324247141], { icon: myIcon }).bindTooltip('Gyu-Kaku Japanese BBQ').addTo(foodMap);
 L.marker([39.95361202516225, -75.15541735854431], { icon: myIcon }).bindTooltip('EMei Restaurant').addTo(foodMap);
