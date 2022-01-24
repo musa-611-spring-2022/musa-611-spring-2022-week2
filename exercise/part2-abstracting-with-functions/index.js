@@ -111,7 +111,6 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 Start code
 
 ===================== */
-
 const addPlace = (name, lat, lng, map) =>{L.marker([lat, lng]).bindTooltip(name).addTo(map)};
 
 addPlace('EMei Restaurant', 39.95363848044654, -75.15542870921058, foodMap);
