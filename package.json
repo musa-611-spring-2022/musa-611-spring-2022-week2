@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "http-server": "^14.1.0",
+    "jest": "^27.4.7",
+    "jest-puppeteer": "^6.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb": "^19.0.4"
+  },
+  "jest": {
+    "preset": "jest-puppeteer"
+  },
+  "eslintConfig": {
+    "extends": "airbnb"
+  }
+}
