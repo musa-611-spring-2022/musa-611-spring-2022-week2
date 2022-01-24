@@ -1,4 +1,4 @@
-name: Testing correct file contents
+name: Testing variable assignments
 
 on:
   pull_request:
@@ -21,4 +21,4 @@ jobs:
     - name: Run jest
       run: |
         npx http-server --silent --port 8000 &
-        npx jest --color=true
+        npx jest lab/part1/ --color=true

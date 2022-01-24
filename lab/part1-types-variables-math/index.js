@@ -23,7 +23,7 @@ const resultTask3 = (dataTask3[c] === 'plum');
 let d;
 const resultTask4 = (d === 'cassiopeia'.length);
 
-let e = 18;
+let e;
 const resultTask5 = (e % 5 === 3);
 
 /* =====================
