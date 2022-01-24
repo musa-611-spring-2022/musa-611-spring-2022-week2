@@ -123,60 +123,36 @@ addPlace(39.9536, -75.1929, 'White Dog Cafe');
 addPlace(39.9554, -75.1995, 'NAM Vietnamese Kitchen');
 addPlace(39.9584, -75.2003, 'Bonchon'); */
 
-let bonchonIcon = L.icon({
-  iconUrl: 'bonchon.png',
-  iconSize: [30, 30], // size of the icon
-  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
-  popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
+var LeafIcon = L.Icon.extend({
+    options: {
+        iconSize:     [30, 30],
+        iconAnchor:   [22, 94],
+        popupAnchor:  [-3, -76]
+    }
 });
 
-let namIcon = L.icon({
-  iconUrl: 'nam.png',
-  iconSize: [30, 30], // size of the icon
-  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
-  popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
-});
+var pin = new LeafIcon({iconUrl: 'cafe.png'})
 
-let cafeIcon = L.icon({
-  iconUrl: 'cafe.png',
-  iconSize: [30, 30], // size of the icon
-  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
-  popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
-});
+/* var bonchonIcon = new LeafIcon({iconUrl: 'bonchon.png'}),
+    namIcon = new LeafIcon({iconUrl: 'nam.png'}),
+    cafeIcon = new LeafIcon({iconUrl: 'cafe.png'}),
+    homeIcon = new LeafIcon({iconUrl: 'home.png'}),
+    pennIcon = new LeafIcon({iconUrl: 'pennlanding.png'}),
+    commercialIcon = new LeafIcon({iconUrl: '15.png'}); */
 
-let homeIcon = L.icon({
-  iconUrl: 'home.png',
-  iconSize: [30, 30], // size of the icon
-  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
-  popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
-});
 
-let pennIcon = L.icon({
-  iconUrl: 'pennlanding.png',
-  iconSize: [30, 30], // size of the icon
-  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
-  popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
-});
-
-let commercialIcon = L.icon({
-  iconUrl: '15.png',
-  iconSize: [30, 30], // size of the icon
-  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
-  popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
-});
-
-function addPlace(map, lat, lng, name, Icon) {
-  L.marker([lat, lng], { icon: Icon }).bindTooltip(name).addTo(map);
+function addPlace(map, lat, lng, name) {
+  L.marker([lat, lng], { icon: pin }).bindTooltip(name).addTo(map);
 }
 
 
-addPlace(foodMap, 39.9536, -75.1929, 'White Dog Cafe', cafeIcon);
-addPlace(foodMap, 39.9554, -75.1995, 'NAM Vietnamese Kitchen', namIcon);
-addPlace(foodMap, 39.9584, -75.2003, 'Bonchon', bonchonIcon);
+addPlace(foodMap, 39.9536, -75.1929, 'White Dog Cafe');
+addPlace(foodMap, 39.9554, -75.1995, 'NAM Vietnamese Kitchen');
+addPlace(foodMap, 39.9584, -75.2003, 'Bonchon',);
 
-addPlace(playMap, 39.9578, -75.2067, 'Home', homeIcon);
-addPlace(playMap, 39.9489, -75.1396, 'PennsLanding', pennIcon);
-addPlace(playMap, 39.9513, -75.1658, '15th Street', commercialIcon);
+addPlace(playMap, 39.9578, -75.2067, 'Home');
+addPlace(playMap, 39.9489, -75.1396, 'PennsLanding');
+addPlace(playMap, 39.9513, -75.1658, '15th Street');
 
 /* =====================
 
