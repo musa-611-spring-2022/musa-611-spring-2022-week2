@@ -121,7 +121,7 @@ Start code
 ===================== */
 
 function addPlace(map, lat, lng, name) {
-  L.marker([lat, lng], { icon: heartIcon} ).bindTooltip(name).addTo(map);
+  L.marker([lat, lng], { icon: heartIcon }).bindTooltip(name).addTo(map);
 }
 
 addPlace(foodMap, 39.93808999843309, -75.14647808588512, 'Royal Sushi & Izakaya');
