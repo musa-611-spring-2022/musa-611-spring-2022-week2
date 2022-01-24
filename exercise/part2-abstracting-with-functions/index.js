@@ -81,7 +81,7 @@ maps to use custom icons on your markers.
 ===================== */
 
 const foodMap = L.map('food-map', {
-  center: [39.9522, -75.1639],
+  center: [39.9536, -75.1929],
   zoom: 14,
 });
 
@@ -95,7 +95,7 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 
 const playMap = L.map('play-map', {
   center: [39.9522, -75.1639],
-  zoom: 14,
+  zoom: 12,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
@@ -112,7 +112,71 @@ Start code
 
 ===================== */
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+/*L.marker([39.9536, -75.1929]).bindTooltip('White Dog Cafe').addTo(foodMap);
+L.marker([39.9554, -75.1995]).bindTooltip('NAM Vietnamese Kitchen').addTo(foodMap);
+L.marker([39.9584, -75.2003]).bindTooltip('Bonchon').addTo(foodMap);*/
+
+/*  L.marker([lat,lng]).bindTooltip(name).addTo(foodMap)
+}
+
+addPlace(39.9536, -75.1929, 'White Dog Cafe');
+addPlace(39.9554, -75.1995, 'NAM Vietnamese Kitchen');
+addPlace(39.9584, -75.2003, 'Bonchon');*/
+
+var bonchonIcon = L.icon({
+    iconUrl: 'bonchon.png',
+    iconSize:     [30, 30], // size of the icon
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+var namIcon = L.icon({
+    iconUrl: 'nam.png',
+    iconSize:     [30, 30], // size of the icon
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+var cafeIcon = L.icon({
+    iconUrl: 'cafe.png',
+    iconSize:     [30, 30], // size of the icon
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+var homeIcon = L.icon({
+    iconUrl: 'home.png',
+    iconSize:     [30, 30], // size of the icon
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+var pennIcon = L.icon({
+    iconUrl: 'pennlanding.png',
+    iconSize:     [30, 30], // size of the icon
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+var commercialIcon = L.icon({
+    iconUrl: '15.png',
+    iconSize:     [30, 30], // size of the icon
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+function addPlace(Icon, map, lat, lng, name) {
+  L.marker([lat,lng],{icon: Icon}).bindTooltip(name).addTo(map)
+}
+
+
+addPlace(cafeIcon, foodMap, 39.9536, -75.1929, 'White Dog Cafe');
+addPlace(namIcon, foodMap, 39.9554, -75.1995, 'NAM Vietnamese Kitchen');
+addPlace(bonchonIcon, foodMap, 39.9584, -75.2003, 'Bonchon');
+
+addPlace(homeIcon,playMap, 39.9578, -75.2067, 'Home');
+addPlace(pennIcon,playMap, 39.9489, -75.1396, 'PennsLanding');
+addPlace(commercialIcon,playMap, 39.9513, -75.1658, '15th Street');
 
 /* =====================
 

@@ -10,20 +10,21 @@ log to test the results.
 
 ===================== */
 
-let a;
+let a = 32;
 const resultTask1 = (a > 30);
 
-let b;
+let b = 'Lala';
 const resultTask2 = (typeof b === 'string');
 
 let c;
 const dataTask3 = ['peach', 'plum', 'pear'];
+c = dataTask3.length -2
 const resultTask3 = (dataTask3[c] === 'plum');
 
-let d;
+let d = 'cassiopeia'.length;
 const resultTask4 = (d === 'cassiopeia'.length);
 
-let e;
+let e = 8;
 const resultTask5 = (e % 5 === 3);
 
 /* =====================
