@@ -112,17 +112,17 @@ Start code
 
 ===================== */
 
-function addPlace(map, lat, lng, name){
+function addPlace(map, lat, lng, name) {
   L.marker([lat, lng]).bindTooltip(name).addTo(map);
 }
 
 addPlace(foodMap, 39.945261691934654, -75.17912938719076, 'Falafel Time');
 addPlace(foodMap, 39.94456835763399, -75.17171423004312, 'Lazaro\'s Pizzeria and Grill');
-addPlace(foodMap, 39.95098662327634, -75.17846713875666, 'Rosy\'s Taco Bar')
+addPlace(foodMap, 39.95098662327634, -75.17846713875666, 'Rosy\'s Taco Bar');
 
 addPlace(playMap, 39.95018523212103, -75.18191318211883, 'Schuylkill River Bank');
 addPlace(playMap, 39.95681702480501, -75.17775220693139, 'Giant');
-addPlace(playMap, 39.949579308422436, -75.17186585183798, 'Rittenhouse Square')
+addPlace(playMap, 39.949579308422436, -75.17186585183798, 'Rittenhouse Square');
 
 /* =====================
 
