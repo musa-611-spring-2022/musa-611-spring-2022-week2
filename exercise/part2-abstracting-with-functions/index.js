@@ -109,8 +109,8 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 const heartIcon = L.icon({
   iconUrl: 'C:/Users/Marlana/Desktop/Spring Semester/MUSA 611/hearticon.png',
 
-  iconSize:    [25, 28], // size of the icon
-  iconAnchor:  [0, 0], // point of the icon which will correspond to marker's location
+  iconSize: [25, 28], // size of the icon
+  iconAnchor: [0, 0], // point of the icon which will correspond to marker's location
   popupAnchor: [0, 0], // point from which the popup should open relative to the iconAnchor
 });
 
@@ -121,8 +121,8 @@ Start code
 ===================== */
 
 function addPlace(map, lat, lng, name) {
-  L.marker([lat, lng], {icon: heartIcon}).bindTooltip(name).addTo(map);
-};
+  L.marker([lat, lng], { icon: heartIcon} ).bindTooltip(name).addTo(map);
+}
 
 addPlace(foodMap, 39.93808999843309, -75.14647808588512, 'Royal Sushi & Izakaya');
 addPlace(foodMap, 39.94916655193396, -75.21315492749963, 'Alif Brew & Mini Mart');
