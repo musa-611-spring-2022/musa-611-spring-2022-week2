@@ -1,4 +1,4 @@
-name: Testing variable assignments
+name: Testing function abstraction
 
 on:
   pull_request:
