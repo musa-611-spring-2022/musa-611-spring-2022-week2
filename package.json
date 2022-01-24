@@ -19,15 +19,8 @@
     "rules": {
       "no-console": "off",
       "no-plusplus": "off",
-      "no-multiple-empty-lines": "off"
-    },
-    "overrides": [
-      {
-        "files": ["lab/lab1/part1*/*.js"],
-        "rules": {
-          "prefer-const": "off"
-        }
-      }
-    ]
+      "no-multiple-empty-lines": "off",
+      "prefer-const": "off"
+    }
   }
 }
