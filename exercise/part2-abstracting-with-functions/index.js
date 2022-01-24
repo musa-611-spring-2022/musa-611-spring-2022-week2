@@ -111,13 +111,18 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 Start code
 
 ===================== */
+var myIcon = L.icon({
+  iconUrl: 'marker.png',
+  iconSize: [19, 48],
+});
 
-L.marker([39.96072280414843, -75.17013324247141]).bindTooltip('Gyu-Kaku Japanese BBQ').addTo(foodMap);
-L.marker([39.95361202516225, -75.15541735854431]).bindTooltip('EMei Restaurant').addTo(foodMap);
-L.marker([39.95463461771335, -75.15616484818501]).bindTooltip('Tai Lake').addTo(foodMap);
+
+L.marker([39.96072280414843, -75.17013324247141], {icon: myIcon}).bindTooltip('Gyu-Kaku Japanese BBQ').addTo(foodMap);
+L.marker([39.95361202516225, -75.15541735854431], {icon: myIcon}).bindTooltip('EMei Restaurant').addTo(foodMap);
+L.marker([39.95463461771335, -75.15616484818501], {icon: myIcon}).bindTooltip('Tai Lake').addTo(foodMap);
 
 function addPlace(map, lat, lng, name) {
-  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+  L.marker([lat, lng], {icon: myIcon}).bindTooltip(name).addTo(map);
 }
 
 addPlace(playMap, 39.96557351829277, -75.1809653049339, 'Philadelphia Museum of Art');
