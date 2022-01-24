@@ -76,8 +76,8 @@ Now use the addPlace function to add your three favorite places to play
 ===================== */
 
 const foodMap = L.map('food-map', {
-  center: [39.9522, -75.1639],
-  zoom: 14,
+  center: [39.95466337105267, -75.20231077496166],
+  zoom: 15,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
@@ -89,7 +89,7 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 }).addTo(foodMap);
 
 const playMap = L.map('play-map', {
-  center: [39.9522, -75.1639],
+  center: [39.9500322999036, -75.18595044355814],
   zoom: 14,
 });
 
@@ -106,8 +106,16 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 Start code
 
 ===================== */
+function addPlace(map, lat, lng, name){
+  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+}
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+addPlace(foodMap, 39.95466337105267, -75.20231077496166, 'Terakawa Ramen');
+addPlace(foodMap, 39.95923102461319, -75.19451625648244, 'Chengdu Famous Food');
+addPlace(foodMap, 39.9539716749273, -75.19754603845936, 'Kim\'s Foodtruck');
+addPlace(playMap, 39.9500322999036, -75.18595044355814, 'Penn Park');
+addPlace(playMap, 39.96560879646457, -75.18113104238043, 'Philadelphia Museum of Art');
+addPlace(playMap, 39.953653771977415, -75.1877384790876, 'Chestnut Square(My apartment)');
 
 /* =====================
 
