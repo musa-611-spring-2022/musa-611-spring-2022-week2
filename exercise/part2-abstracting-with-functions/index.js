@@ -118,7 +118,7 @@ let LeafIcon = L.Icon.extend({
   },
 });
 
-let orangeIcon = new LeafIcon( {iconUrl: 'leaf-orange.png'} );
+let orangeIcon = new LeafIcon({ iconUrl: 'leaf-orange.png' });
 
 /* =====================
 
@@ -126,12 +126,12 @@ Start code
 
 ===================== */
 
-// L.marker([40.45071088979802, -79.98556092381476]).bindTooltip('Primanti Bros, Original Location').addTo(foodMap);
+// L.marker([40.45071088979802, -79.98556092381476]).bindTooltip('Primanti Bros').addTo(foodMap);
 // L.marker([40.04389139038451, -75.39526462554932]).bindTooltip("Minella's Diner").addTo(foodMap);
 // L.marker([41.71571201183046, -73.92983436584473]).bindTooltip("Palace Diner").addTo(foodMap);
 
 function addPlace (map, lat, lng, name) {
-  L.marker([lat, lng], {icon: orangeIcon}).addTo(map).bindTooltip(name);
+  L.marker([lat, lng], { icon: orangeIcon }).addTo(map).bindTooltip(name);
 }
 
 // Add markers to foodMap
