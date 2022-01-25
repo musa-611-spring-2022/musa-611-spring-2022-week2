@@ -19,7 +19,7 @@ const resultTask3 = (dataTask3[c] === 'plum');
 let d = 10;
 const resultTask4 = (d === 'cassiopeia'.length);
 
-let e = 18;
+let e = 8;
 const resultTask5 = (e % 5 === 3);
 
 /* =====================
@@ -31,7 +31,7 @@ const taskResults = [
   resultTask2,
   resultTask3,
   resultTask4,
-  resultTask5, 
+  resultTask5,
 ];
 function reportTaskSuccess(taskNumber) {
   const taskIdx = taskNumber - 1;
