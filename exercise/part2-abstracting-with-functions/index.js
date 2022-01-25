@@ -81,8 +81,8 @@ maps to use custom icons on your markers.
 ===================== */
 
 const foodMap = L.map('food-map', {
-  center: [39.9554619822942, -75.19887245090659],
-  zoom: 16,
+  center: [39.95383090189047, -75.19244622048892],
+  zoom: 15,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
@@ -95,7 +95,7 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 
 const playMap = L.map('play-map', {
   center: [39.9522, -75.1639],
-  zoom: 14,
+  zoom: 13,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
@@ -109,15 +109,61 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 /* =====================
 
 Start code
-
-===================== */
-
 L.marker([39.95518350574191, -75.19931575943262]).bindTooltip('Coney Shack').addTo(foodMap);
 L.marker([39.95522447448491, -75.1998482020107]).bindTooltip('The Halal Guys').addTo(foodMap);
 L.marker([39.954899042422674, -75.20009627158234]).bindTooltip('Beilers Doughnuts').addTo(foodMap);
 
+===================== */
+
+/*
+
+const FoodIcon = L.icon({
+    iconUrl: 'foodicon.png',
+    iconSize: [100, 100], // size of the icon
+    iconAnchor: [500, 1126], //// point of the icon which will correspond to marker's location
+    popupAnchor: [-30, -30], // point from which the popup should open relative to the iconAnchor
+});
+
+const addPlace(map, lat, lng, name) => {
+  L.marker([lat, lng], { icon: FoodIcon }).bindTooltip(name).addTo(map);
+};
+
+addPlace(foodMap,39.95518350574191, -75.19931575943262,'Coney Shack');
+*/
+
+const FoodIcon = L.icon({
+  iconUrl: 'foodicon.png',
+  iconSize: [50, 50], // size of the icon
+  iconAnchor: [40, 40], // point of the icon which will correspond to marker's location
+  popupAnchor: [-30, -30], // point from which the popup should open relative to the iconAnchor
+});
+
+const PlayIcon = L.icon({
+  iconUrl: 'playicon.png',
+  iconSize: [50, 50], // size of the icon
+  iconAnchor: [40, 40], // point of the icon which will correspond to marker's location
+  popupAnchor: [-30, -30], // point from which the popup should open relative to the iconAnchor
+});
 
 
+let addPlace = (map, lat, lng, name) => {
+  L.marker([lat, lng], { icon: FoodIcon }).bindTooltip(name).addTo(map);
+};
+
+
+
+/*
+function addPlace(map, lat, lng, name) {
+  L.marker([lat, lng], { icon: FoodIcon }).bindTooltip(name).addTo(map);
+}
+*/
+
+addPlace(foodMap, 39.95518350574191, -75.19931575943262, 'Coney Shack');
+addPlace(foodMap, 39.95224022010288, -75.18514258031539, 'World Cafe Live Philadelphia');
+addPlace(foodMap, 39.954899042422674, -75.20009627158234, 'Beilers Doughnuts');
+addPlace(playMap, 39.950927391756565, -75.19337652706486, 'Penn Museum');
+addPlace(playMap, 39.953490023288694, -75.16387447879991, 'Philadelphia City Hall');
+addPlace(playMap, 39.9663895216774, -75.18108946074749, 'Philadelphia Museum of Art');
 /* =====================
 
 End code
