@@ -115,12 +115,8 @@ Start code
 
 L.marker([39.953154, -75.156851]).bindTooltip('Happy Lamb').addTo(foodMap);
 L.marker([39.953604, -75.175432]).bindTooltip('Double Knot').addTo(foodMap);
+L.marker([39.949683, -75.162188]).bindTooltip('Pho Street').addTo(foodMap);
 
-function addPlace3(lat, lon, name) {
-  return L.marker([lat, lon]).bindTooltip(name).addTo(foodMap);
-}
-
-addPlace(39.949683, -75.162188, 'Pho Street');
 
 // Task 4
 
