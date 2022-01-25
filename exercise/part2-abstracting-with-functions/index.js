@@ -93,11 +93,6 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
   ext: 'png',
 }).addTo(foodMap);
 
-function addPlace(lat,lng,name)
-{
-  L.marker([lat, lng]).bindTooltip(name).addTo(foodMap);
-}
-
 const playMap = L.map('play-map', {
   center: [39.9522, -75.1639],
   zoom: 14,
@@ -111,7 +106,7 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
   ext: 'png',
 }).addTo(playMap);
 
-function addPlace(lat, lng, name, map)
+function addPlace(map,lat,lng,name)
 {
   L.marker([lat, lng]).bindTooltip(name).addTo(map);
 }
@@ -122,17 +117,17 @@ Start code
 
 ===================== */
 
-addPlace(39.952395181787665, -75.17204718870082, 'El Rey', foodMap);
-addPlace(39.952354, -75.168764, 'Green Eggs Caffee', foodMap);
-addPlace(39.955295, -75.170517, 'The Mulberry', foodMap);
+addPlace(foodMap,39.952395181787665, -75.17204718870082,'El Rey');
+addPlace(foodMap,39.952354, -75.168764,'Green Eggs Caffee');
+addPlace(foodMap,39.955295, -75.170517,'The Mulberry');
 /*
 L.marker([39.952395181787665, -75.17204718870082]).bindTooltip('El Rey').addTo(foodMap);
 L.marker([39.952354, -75.168764]).bindTooltip('Green Eggs Caffee').addTo(foodMap);
 L.marker([39.955295, -75.170517]).bindTooltip('The Mulberry').addTo(foodMap);
 */
-addPlace(39.954078, -75.165653, 'Love Park', playMap);
-addPlace(39.952298, -75.163886, 'City hall', playMap);
-addPlace(39.952206, -75.179706, '2400 chestnut', playMap)
+addPlace(playMap,39.954078, -75.165653,'Love Park');
+addPlace(playMap,39.952298, -75.163886,'City hall');
+addPlace(playMap,39.952206, -75.179706,'2400 chestnut');
 /* =====================
 
 End code
