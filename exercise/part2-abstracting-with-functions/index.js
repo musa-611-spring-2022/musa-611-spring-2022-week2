@@ -81,8 +81,8 @@ maps to use custom icons on your markers.
 ===================== */
 
 const foodMap = L.map('food-map', {
-  center: [39.9522, -75.1639],
-  zoom: 14,
+  center: [39.9554619822942, -75.19887245090659],
+  zoom: 16,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
@@ -112,7 +112,11 @@ Start code
 
 ===================== */
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+L.marker([39.95518350574191, -75.19931575943262]).bindTooltip('Coney Shack').addTo(foodMap);
+L.marker([39.95522447448491, -75.1998482020107]).bindTooltip('The Halal Guys').addTo(foodMap);
+L.marker([39.954899042422674, -75.20009627158234]).bindTooltip('Beilers Doughnuts').addTo(foodMap);
+
+
 
 /* =====================
 

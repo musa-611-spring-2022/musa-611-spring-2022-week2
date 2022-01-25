@@ -10,13 +10,13 @@ log to test the results.
 
 ===================== */
 
-let a=56;
+let a = 56;
 const resultTask1 = (a > 30);
 
-let b='loveyou';
+let b ='loveyou';
 const resultTask2 = (typeof b === 'string');
 
-let c = 2;
+let c = 1;
 const dataTask3 = ['peach', 'plum', 'pear'];
 const resultTask3 = (dataTask3[c] === 'plum');
 
