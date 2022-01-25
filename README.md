@@ -62,9 +62,9 @@ When you submit your pull request, your code will be linted and tested automatic
 > # Run the linter
 > npx eslint exercise
 >
-> # Run the http server
+> # Run the web server; this is needed for the tests
 > npx http-server --port 8000
-> 
-> # Open a new terminal and Run the tests
+>
+> # Open a new terminal and run the tests
 > npx jest
->  ```
+> ```
