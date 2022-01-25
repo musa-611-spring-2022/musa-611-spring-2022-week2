@@ -123,12 +123,12 @@ function addPlace(lat, lon, name) {
 
 // Task 4
 
-function addPlace4(map, lat, lon, name) {
+function addPlace(map, lat, lon, name) {
   return L.marker([lat, lon]).bindTooltip(name).addTo(map);
 }
-addPlace4(playMap, 39.975506, -75.192760, 'Northeast Corridor Schuykill Bridge');
-addPlace4(playMap, 40.002786, -75.273100, 'SEPTA Ardmore Station');
-addPlace4(playMap, 39.961376, -75.262561, 'H-Mart Upper Darby');
+addPlace(playMap, 39.975506, -75.192760, 'Northeast Corridor Schuykill Bridge');
+addPlace(playMap, 40.002786, -75.273100, 'SEPTA Ardmore Station');
+addPlace(playMap, 39.961376, -75.262561, 'H-Mart Upper Darby');
 
 /* =====================
 
