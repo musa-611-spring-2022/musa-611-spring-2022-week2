@@ -107,18 +107,18 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 }).addTo(playMap);
 
 // Create green icon - from https://leafletjs.com/examples/custom-icons/
-var LeafIcon = L.Icon.extend({
+let LeafIcon = L.Icon.extend({
   options: {
-      shadowUrl: 'leaf-shadow.png',
-      iconSize:     [38, 95],
-      shadowSize:   [50, 64],
-      iconAnchor:   [22, 94],
-      shadowAnchor: [4, 62],
-      popupAnchor:  [-3, -76]
-  }
+    shadowUrl: 'leaf-shadow.png',
+    iconSize: [15, 38],
+    shadowSize: [25, 32],
+    iconAnchor: [11, 47],
+    shadowAnchor: [2, 31],
+    popupAnchor: [-2, -38],
+  },
 });
 
-var orangeIcon = new LeafIcon({iconUrl: 'leaf-orange.png'});
+let orangeIcon = new LeafIcon( {iconUrl: 'leaf-orange.png'} );
 
 /* =====================
 
@@ -136,13 +136,13 @@ function addPlace (map, lat, lng, name) {
 
 // Add markers to foodMap
 addPlace(foodMap, 40.45071088979802, -79.98556092381476, 'Primanti Bros, Original Location');
-addPlace(foodMap, 40.04389139038451, -75.39526462554932, "Minella's Diner");
-addPlace(foodMap, 41.71571201183046, -73.92983436584473, "Palace Diner");
+addPlace(foodMap, 40.04389139038451, -75.39526462554932, 'Minellas Diner');
+addPlace(foodMap, 41.71571201183046, -73.92983436584473, 'Palace Diner');
 
 // Add markers to playMap
 addPlace(playMap, 40.10463173609721, -75.32953977584839, 'Reach Climbing and Fitness');
-addPlace(playMap, 39.95828200388112, -75.1731026172638, "The Franklin Institute");
-addPlace(playMap, 39.95678937071908, -75.1712304353714, "The Academy of Natural Sciences");
+addPlace(playMap, 39.95828200388112, -75.1731026172638, 'The Franklin Institute');
+addPlace(playMap, 39.95678937071908, -75.1712304353714, 'The Academy of Natural Sciences');
 
 /* =====================
 
