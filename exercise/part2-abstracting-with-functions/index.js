@@ -106,6 +106,20 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
   ext: 'png',
 }).addTo(playMap);
 
+// Create green icon - from https://leafletjs.com/examples/custom-icons/
+var LeafIcon = L.Icon.extend({
+  options: {
+      shadowUrl: 'leaf-shadow.png',
+      iconSize:     [38, 95],
+      shadowSize:   [50, 64],
+      iconAnchor:   [22, 94],
+      shadowAnchor: [4, 62],
+      popupAnchor:  [-3, -76]
+  }
+});
+
+var orangeIcon = new LeafIcon({iconUrl: 'leaf-orange.png'});
+
 /* =====================
 
 Start code
@@ -117,7 +131,7 @@ Start code
 // L.marker([41.71571201183046, -73.92983436584473]).bindTooltip("Palace Diner").addTo(foodMap);
 
 function addPlace (map, lat, lng, name) {
-  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+  L.marker([lat, lng], {icon: orangeIcon}).addTo(map).bindTooltip(name);
 }
 
 // Add markers to foodMap
