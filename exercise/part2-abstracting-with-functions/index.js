@@ -112,20 +112,20 @@ Start code
 
 ===================== */
 
-//define function that will take lat, lng, name, and the map of the place to add to the foodMap
+// define function that will take lat, lng, name, and the map of the place to add to the foodMap
 const addPlace = (lat, lng, name, map) => {
-  L.marker([lat, lng]).bindTooltip(name).addTo(map); 
-}
+  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+};
 
-//add three favorite places to eat
+// add three favorite places to eat
 addPlace(39.93227222482403, -75.16106629872182, 'Triangle Tavern', foodMap);
 addPlace(39.953606980487194, -75.15582054989262, 'Chu Shang Spicy', foodMap);
 addPlace(39.94676587494185, -75.1622357808715, 'Monster Vegan', foodMap);
 
-//add three places to play 
-addPlace(39.933372279424155, -75.16595124396353, 'Home', playMap)
-addPlace(39.93894158237027, -75.16743182327265, 'Sprouts', playMap)
-addPlace(39.95268820108401, -75.16908474582212, 'Favorite Place to Work!', playMap)
+// add three places to play
+addPlace(39.933372279424155, -75.16595124396353, 'Home', playMap);
+addPlace(39.93894158237027, -75.16743182327265, 'Sprouts', playMap);
+addPlace(39.95268820108401, -75.16908474582212, 'Favorite Place to Work!', playMap);
 /* =====================
 
 End code
