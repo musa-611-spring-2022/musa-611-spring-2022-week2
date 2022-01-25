@@ -81,8 +81,8 @@ maps to use custom icons on your markers.
 ===================== */
 let LeafIcon = L.Icon.extend({
   options: {
-    iconSize:[38, 60],
-  }
+    iconSize: [38, 60]
+  ,}
 });
 
 let hatIcon = new LeafIcon({
@@ -118,7 +118,7 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 
 
 function addPlace(map, lat, lng, name) {
-  L.marker([lat,lng], {icon: hatIcon}).bindTooltip(name).addTo(map);
+  L.marker([lat,lng], { icon: hatIcon }).bindTooltip(name).addTo(map);
 }
 /* =====================
 Start code
@@ -126,13 +126,13 @@ Start code
 ===================== */
 
 
-addPlace(foodMap, 39.93218450476475, -75.16634055225458, 'Victor Cafe' );
-addPlace(foodMap, 39.95599995834667, -75.20173643714219, 'Dim Sum House' );
-addPlace(foodMap, 39.953936345506, -75.15716852393271, 'Happy Lamb Hot Pot' );
+addPlace(foodMap, 39.93218450476475, -75.16634055225458, 'Victor Cafe');
+addPlace(foodMap, 39.95599995834667, -75.20173643714219, 'Dim Sum House');
+addPlace(foodMap, 39.953936345506, -75.15716852393271, 'Happy Lamb Hot Pot');
 
-addPlace(playMap, 39.95283577182329, -75.1832976081227, 'Cira Green' );
-addPlace(playMap, 39.95303584686999, -75.13895486800001, 'Race Street Pier' );
-addPlace(playMap, 39.93859876117279, -75.15784355203914, 'Italian Market 9th Street' );
+addPlace(playMap, 39.95283577182329, -75.1832976081227, 'Cira Green');
+addPlace(playMap, 39.95303584686999, -75.13895486800001, 'Race Street Pier');
+addPlace(playMap, 39.93859876117279, -75.15784355203914, 'Italian Market 9th Street');
 /* =====================
 
 End code
