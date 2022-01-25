@@ -79,6 +79,15 @@ Using the Leaflet documentation (https://leafletjs.com/), try to set up your
 maps to use custom icons on your markers.
 
 ===================== */
+let LeafIcon = L.Icon.extend({
+  options: {
+    iconSize:[38, 60],
+  }
+});
+
+let hatIcon = new LeafIcon({
+  iconUrl: 'hat_icon.png',
+});
 
 const foodMap = L.map('food-map', {
   center: [39.9522, -75.1639],
@@ -106,11 +115,7 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
   ext: 'png',
 }).addTo(playMap);
 
-var LeafIcon = L.Icon.extend({
-  options: {
-      iconSize:     [38, 60]
-  }
-});
+
 
 function addPlace(map, lat, lng, name) {
   L.marker([lat,lng], {icon: hatIcon}).bindTooltip(name).addTo(map);
@@ -119,15 +124,15 @@ function addPlace(map, lat, lng, name) {
 Start code
 
 ===================== */
-var hatIcon = new LeafIcon({iconUrl: 'hat_icon.png'});
 
-addPlace(foodMap, 39.93218450476475, -75.16634055225458, 'Victor Cafe' )
-addPlace(foodMap, 39.95599995834667, -75.20173643714219, 'Dim Sum House' )
-addPlace(foodMap, 39.953936345506, -75.15716852393271, 'Happy Lamb Hot Pot' )
 
-addPlace(playMap, 39.95283577182329, -75.1832976081227, 'Cira Green' )
-addPlace(playMap, 39.95303584686999, -75.13895486800001, 'Race Street Pier' )
-addPlace(playMap, 39.93859876117279, -75.15784355203914, 'Italian Market 9th Street' )
+addPlace(foodMap, 39.93218450476475, -75.16634055225458, 'Victor Cafe' );
+addPlace(foodMap, 39.95599995834667, -75.20173643714219, 'Dim Sum House' );
+addPlace(foodMap, 39.953936345506, -75.15716852393271, 'Happy Lamb Hot Pot' );
+
+addPlace(playMap, 39.95283577182329, -75.1832976081227, 'Cira Green' );
+addPlace(playMap, 39.95303584686999, -75.13895486800001, 'Race Street Pier' );
+addPlace(playMap, 39.93859876117279, -75.15784355203914, 'Italian Market 9th Street' );
 /* =====================
 
 End code
