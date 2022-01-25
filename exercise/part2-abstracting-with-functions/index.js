@@ -130,7 +130,7 @@ Start code
 // L.marker([40.04389139038451, -75.39526462554932]).bindTooltip("Minella's Diner").addTo(foodMap);
 // L.marker([41.71571201183046, -73.92983436584473]).bindTooltip("Palace Diner").addTo(foodMap);
 
-function addPlace (map, lat, lng, name) {
+function addPlace(map, lat, lng, name) {
   L.marker([lat, lng], { icon: orangeIcon }).addTo(map).bindTooltip(name);
 }
 
