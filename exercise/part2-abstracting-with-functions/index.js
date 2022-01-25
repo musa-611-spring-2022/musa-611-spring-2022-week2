@@ -81,8 +81,8 @@ maps to use custom icons on your markers.
 ===================== */
 let LeafIcon = L.Icon.extend({
   options: {
-    iconSize: [38, 60], 
-    }, 
+    iconSize: [38, 60],
+  },
 });
 
 let hatIcon = new LeafIcon({
