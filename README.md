@@ -9,7 +9,7 @@ You can review the concepts raised in the Codecademy exercises in [review.md](re
 ### Code Academy
 
 * Complete Units 5 through 8 in the Codecademy Course
-[Introductory Javascript](https://www.codecademy.com/learn/introduction-to-javascript)
+  [Introductory Javascript](https://www.codecademy.com/learn/introduction-to-javascript)
   - Arrays
   - Loops
   - Iterators
