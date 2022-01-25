@@ -112,8 +112,16 @@ Start code
 
 ===================== */
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+function addPlace(map, lat, long, name) {
+  L.marker([lat, long]).bindTooltip(name).addTo(map);
+}
 
+addPlace(foodMap, 39.950272, -75.166862, 'Federal donuts - Center City');
+addPlace(foodMap, 39.941880, -75.152230, 'Federal donuts - South Street');
+addPlace(foodMap, 39.932250, -75.147470, 'Federal donuts - The Orig!');
+addPlace(playMap, 39.953194, -75.163345, 'City hall!');
+addPlace(playMap, 39.965765, -75.181310, 'Museum of art');
+addPlace(playMap, 39.932250, -75.147470, 'Federal donuts - The Orig! (great for food and play)');
 /* =====================
 
 End code
