@@ -125,9 +125,9 @@ addPlace(39.9584, -75.2003, 'Bonchon'); */
 
 
 const marker = L.icon({
-  iconUrl: 'cafe.png',
-  iconSize: [30, 30], // size of the icon
-  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+  iconUrl: 'location.png',
+  iconSize: [40, 40], // size of the icon
+  iconAnchor: [0,0], // point of the icon which will correspond to marker's location
   popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
 });
 
