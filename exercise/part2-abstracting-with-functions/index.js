@@ -112,7 +112,18 @@ Start code
 
 ===================== */
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+const addPlace = (map, lat, lng, name) => {
+  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+};
+
+addPlace(foodMap, 39.9490325526341, -75.17880189972472, 'SALLY Philadelphia');
+addPlace(foodMap, 39.94456781193162, -75.17090256110758, 'Pumpkin BYOB');
+addPlace(foodMap, 39.95194754424125, -75.17362794205181, 'Pho Mi Rittenhouse');
+
+addPlace(playMap, 39.958859715054544, -75.15576315739733, 'The Cliffs at Callowhill');
+addPlace(playMap, 39.95928864762268, -75.15865644205155, 'Underground Arts');
+addPlace(playMap, 39.952494121270526, -75.17972768719034, 'Schuylkill River Trail');
+
 
 /* =====================
 
