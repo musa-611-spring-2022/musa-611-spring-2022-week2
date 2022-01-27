@@ -94,7 +94,7 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 }).addTo(foodMap);
 
 const playMap = L.map('play-map', {
-  center: [39.9522, -75.1639],
+  center: [ 39.952187908111135, -75.1775351899665],
   zoom: 14,
 });
 
@@ -111,15 +111,15 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 Start code
 
 ===================== */
-
-/*var marker = L.icon({
+/*
+var marker = L.icon({
   iconUrl: 'food.png',
   iconSize: [40,40],
   iconAnchor: [22,94],
   popupAnchor: [-3, -76],
-});*/
-
-var marker = L.icon({
+});
+*/
+var marker = L.Icon.extend({
   options: {
   
       iconSize: [40,40],
@@ -131,28 +131,30 @@ var marker = L.icon({
 var foodIcon = new marker({iconUrl: 'food.png'},
     playIcon = new marker({iconUrl: 'play.png'}));
 
-L.icon = function (options) {
+/*L.icon = function (options) {
     return new L.icon(options);
 };
-/* =====================
-Task 1 & 2
-L.marker([39.949270328885255, -75.17065620024965], {icon: marker}).bindTooltip('My favorite Restaurant Parc').addTo(foodMap);
-L.marker([39.9537624753943, -75.15616316198373], {icon: marker}).bindTooltip('My second favorite Restaurant Lanzhou Noodles').addTo(foodMap);
-L.marker([39.95256482549475, -75.17027728108867], {icon: marker}).bindTooltip('My third favorite Restaurant Nom Nom Ramen').addTo(foodMap);
-===================== */
+
+/*Task 1 & 2
+L.marker([39.949270328885255, -75.17065620024965]).bindTooltip('My favorite Restaurant Parc').addTo(foodMap);
+L.marker([39.9537624753943, -75.15616316198373]).bindTooltip('My second favorite Restaurant Lanzhou Noodles').addTo(foodMap);
+L.marker([39.95256482549475, -75.17027728108867]).bindTooltip('My third favorite Restaurant Nom Nom Ramen').addTo(foodMap);
+*/
 
 
 
-let addPlace = (map, lat, lng, name) => {
-L.marker([lat, lng], {icon:marker}). bindTooltip(name).addTo(map);};
+let addPlace = (map, lat, lng, name, options) => {
+L.marker([lat, lng], options). bindTooltip(name).addTo(map);};
 
-addPlace(foodMap, 39.949270328885255, -75.17065620024965,{icon: foodIcon},'Parc');
-addPlace(foodMap, 39.9537624753943, -75.15616316198373,{icon: foodIcon},'Lanzhou Noodles');
-addPlace(foodMap, 39.95256482549475, -75.17027728108867,{icon: foodIcon},'Nom Nom Ramen');
+addPlace(foodMap, 39.949270328885255, -75.17065620024965,'Parc', {icon: foodIcon});
+addPlace(foodMap, 39.9537624753943, -75.15616316198373,'Lanzhou Noodles',{icon: foodIcon});
+addPlace(foodMap, 39.95256482549475, -75.17027728108867,'Nom Nom Ramen',{icon: foodIcon});
 
-addPlace(playMap, 39.96556728894297, -75.18072976865237,{icon: PlayIcon},'Philadelphia Museum of Art');
-addPlace(playMap, 39.95845687130235, -75.17316237568885,{icon: PlayIcon},'The Franklin Institute');
-addPlace(playMap, 39.94871308117469, -75.1819735267822,{icon: PlayIcon},'Schuykill River Park');
+addPlace(playMap, 39.96556728894297, -75.18072976865237,'Philadelphia Museum of Art',{icon: playIcon});
+addPlace(playMap, 39.95845687130235, -75.17316237568885,'The Franklin Institute',{icon: playIcon});
+addPlace(playMap, 39.94871308117469, -75.1819735267822,'Schuykill River Park',{icon: playIcon});
+
+
 
 /* =====================
 
