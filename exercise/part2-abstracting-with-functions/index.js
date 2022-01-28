@@ -123,11 +123,11 @@ const strawberryIcon = L.icon({
   // shadowSize:   [50, 64], // size of the shadow
   iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
   // shadowAnchor: [4, 62],  // the same for the shadow
-  popupAnchor: [0, 0] // point from which the popup should open relative to the iconAnchor
+  popupAnchor: [0, 0], // point from which the popup should open relative to the iconAnchor
 });
 
 const addPlace = (map, lat, lng, name) => {
-  L.marker([lat, lng], {icon: strawberryIcon}).bindTooltip(name).addTo(map).bindPopup('This is a pink strawberry marker!!');
+  L.marker([lat, lng], { icon: strawberryIcon }).bindTooltip(name).addTo(map).bindPopup('This is a pink strawberry marker!!');
 };
 
 // Add three places to foodMap
