@@ -80,7 +80,8 @@ maps to use custom icons on your markers.
 
 ===================== */
 
-var marker = L.Icon.extend({
+/*
+const marker = L.Icon.extend({
   options: {
 
     iconSize: [40, 40],
@@ -89,12 +90,20 @@ var marker = L.Icon.extend({
   },
 });
 
-var foodIcon = new marker(
+const foodIcon = new marker(
   { iconUrl: 'food.png' },
   playIcon = new marker(
-    { iconUrl: 'play.png' },
+    { iconUrl: 'favor.png' },
   ),
 );
+*/
+const newicon = L.icon({
+  iconUrl: 'favor.png',
+  iconSize: [40, 40],
+  iconAnchor: [22, 94],
+  popupAnchor: [-3, -76],
+});
+
 const foodMap = L.map('food-map', {
   center: [39.949270328885255, -75.17065620024965],
   zoom: 14,
@@ -128,7 +137,7 @@ Start code
 ===================== */
 /*
 var marker = L.icon({
-  iconUrl: 'food.png',
+  iconUrl: 'favor.png',
   iconSize: [40,40],
   iconAnchor: [22,94],
   popupAnchor: [-3, -76],
@@ -148,17 +157,17 @@ L.marker([39.95256482549475, -75.17027728108867]).bindTooltip('Nom Nom Ramen').a
 
 
 
-function addPlace(map, lat, lng, name, options) {
-  L.marker([lat, lng], options).bindTooltip(name).addTo(map);
+function addPlace(map, lat, lng, name) {
+  L.marker([lat, lng], { icon: newicon }).bindTooltip(name).addTo(map);
 }
 
-addPlace(foodMap, 39.949270328885255, -75.17065620024965, 'Parc', { icon: foodIcon });
-addPlace(foodMap, 39.9537624753943, -75.15616316198373, 'Lanzhou Noodles', { icon: foodIcon });
-addPlace(foodMap, 39.95256482549475, -75.17027728108867, 'Nom Nom Ramen', { icon: foodIcon });
+addPlace(foodMap, 39.949270328885255, -75.17065620024965, 'Parc');
+addPlace(foodMap, 39.9537624753943, -75.15616316198373, 'Lanzhou Noodles');
+addPlace(foodMap, 39.95256482549475, -75.17027728108867, 'Nom Nom Ramen');
 
-addPlace(playMap, 39.96556728894297, -75.18072976865237, 'Philadelphia Museum of Art', { icon: playIcon });
-addPlace(playMap, 39.95845687130235, -75.17316237568885, 'The Franklin Institute', { icon: playIcon });
-addPlace(playMap, 39.94871308117469, -75.1819735267822, 'Schuykill River Park', { icon: playIcon });
+addPlace(playMap, 39.96556728894297, -75.18072976865237, 'Philadelphia Museum of Art');
+addPlace(playMap, 39.95845687130235, -75.17316237568885, 'The Franklin Institute');
+addPlace(playMap, 39.94871308117469, -75.1819735267822, 'Schuykill River Park');
 
 
 
