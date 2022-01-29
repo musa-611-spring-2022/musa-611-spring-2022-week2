@@ -112,19 +112,19 @@ Start code
 
 ===================== */
 
-/*L.marker([39.9681753,-75.1453758]).bindTooltip('Laser Wolf').addTo(foodMap);
+/* L.marker([39.9681753,-75.1453758]).bindTooltip('Laser Wolf').addTo(foodMap);
 L.marker([39.9487219,-75.1801516]).bindTooltip('Trattoria Carina').addTo(foodMap);
-L.marker([39.9550201,-75.2020847]).bindTooltip('Bonchon University City').addTo(foodMap);*/
+L.marker([39.9550201,-75.2020847]).bindTooltip('Bonchon University City').addTo(foodMap); */
 
-function addPlace(map,lat,lng,name) {
-  L.marker([lat,lng,]).bindTooltip(name).addTo(map);
-};
-addPlace(foodMap,39.9681753,-75.1453758,'Laser Wolf');
-addPlace(foodMap,39.9487219,-75.1801516, 'Trattoria Carina');
-addPlace(foodMap,39.9550201,-75.2020847, 'Bonchon University City');
-addPlace(playMap,39.9656908,-75.1702113, 'Roberto Clemente Park');
-addPlace(playMap,39.9533336,-75.1606826, 'Reading Terminal Market');
-addPlace(playMap,39.9528356,-75.1835008, 'Cira Green');
+function addPlace(map, lat, lng, name) {
+  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+}
+addPlace(foodMap, 39.9681753, -75.1453758, 'Laser Wolf');
+addPlace(foodMap, 39.9487219, -75.1801516, 'Trattoria Carina');
+addPlace(foodMap, 39.9550201, -75.2020847, 'Bonchon University City');
+addPlace(playMap, 39.9656908, -75.1702113, 'Roberto Clemente Park');
+addPlace(playMap, 39.9533336, -75.1606826, 'Reading Terminal Market');
+addPlace(playMap, 39.9528356, -75.1835008, 'Cira Green');
 
 /* =====================
 
