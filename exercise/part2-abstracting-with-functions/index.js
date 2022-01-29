@@ -46,7 +46,7 @@ functionality we have been learning about. We will start by reducing the number
 of times we call the L.marker method. We will do this by "abstracting" from the
 concept of a marker with a tooltip to the concept of a place with a name.
 
-Create a function called "addPlace" that will add a marker with a tooltip to a
+Create a function called "C" that will add a marker with a tooltip to a
 map. Your function should take three arguments in this order:
 
   1. lat,
@@ -106,6 +106,19 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
   ext: 'png',
 }).addTo(playMap);
 
+
+var greenIcon = L.icon({
+  iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/12/User_icon_2.svg',
+
+  iconSize:     [38, 95], // size of the icon
+  shadowSize:   [50, 64], // size of the shadow
+  iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+  shadowAnchor: [4, 62],  // the same for the shadow
+  popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+
+
 /* =====================
 
 Start code
@@ -113,6 +126,23 @@ Start code
 ===================== */
 
 L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+L.marker([39.956901982221076, -75.22472386176756]).bindTooltip('ACME').addTo(foodMap);
+L.marker([39.95545913165758, -75.20113170145406]).bindTooltip('DIM SUM House').addTo(foodMap);
+L.marker([39.95493278571354, -75.19370734686116]).bindTooltip('SAN KEE Noodle').addTo(foodMap);
+
+function C(lat, lng, name) {
+  L.marker([lat, lng]).bindTooltip(name).addTo(foodMap);
+}
+
+function addFunction(lat,lng,name,map) {
+  L.marker([lat, lng],{icon: greenIcon}).bindTooltip(name).addTo(map);
+}
+
+C(39.956901982221076, -75.22472386176756,'ACME')
+addFunction(39.956901982221076, -75.22472386176756,'ACME',playMap)
+addFunction(39.95493278571354, -75.19370734686116,'SAN KEE Noodle',playMap)
+addFunction(39.95545913165758, -75.20113170145406,'DIM SUM House',playMap)
+
 
 /* =====================
 
