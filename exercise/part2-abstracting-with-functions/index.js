@@ -112,7 +112,7 @@ Start code
 
 ===================== */
 
-function addPlace(map, lat, lng, name){
+function addPlace(map, lat, lng, name) {
   L.marker([lat, lng]).bindTooltip(name).addTo(map);
 }
 
@@ -122,7 +122,7 @@ addPlace(foodMap, 39.96159, -75.16659, 'Jamaican D\'s Food Truck');
 
 addPlace(playMap, 39.95347, -75.16319, 'Masonic Temple');
 addPlace(playMap, 39.95149, -75.19378, 'UPenn');
-addPlace(playMap, 39.96001, -75.16639 , 'The Lofts at Logan View');
+addPlace(playMap, 39.96001, -75.16639, 'The Lofts at Logan View');
 
 /* =====================
 
