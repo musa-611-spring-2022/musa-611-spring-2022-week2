@@ -81,28 +81,28 @@ maps to use custom icons on your markers.
 ===================== */
 
 const foodMap = L.map('food-map', {
-  center: [39.9522, -75.1639],
-  zoom: 14,
+  center: [39.95442, -75.18021],
+  zoom: 13,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
   attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   subdomains: 'abcd',
   minZoom: 0,
-  maxZoom: 20,
+  maxZoom: 15,
   ext: 'png',
 }).addTo(foodMap);
 
 const playMap = L.map('play-map', {
-  center: [39.9522, -75.1639],
-  zoom: 14,
+  center: [39.95442, -75.18021],
+  zoom: 13,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
   attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   subdomains: 'abcd',
   minZoom: 0,
-  maxZoom: 20,
+  maxZoom: 15,
   ext: 'png',
 }).addTo(playMap);
 
@@ -112,7 +112,17 @@ Start code
 
 ===================== */
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+function addPlace(map, lat, lng, name){
+  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+}
+
+addPlace(foodMap, 39.93534, -75.15883, 'South Philly Barbacoa');
+addPlace(foodMap, 39.95375, -75.15906, 'Dutch Eating Place');
+addPlace(foodMap, 39.96159, -75.16659, 'Jamaican D\'s Food Truck');
+
+addPlace(playMap, 39.95347, -75.16319, 'Masonic Temple');
+addPlace(playMap, 39.95149, -75.19378, 'UPenn');
+addPlace(playMap, 39.96001, -75.16639 , 'The Lofts at Logan View');
 
 /* =====================
 

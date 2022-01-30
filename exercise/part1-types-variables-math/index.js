@@ -11,20 +11,20 @@ log to test the results.
 ===================== */
 
 let a;
-const resultTask1 = (a > 30);
+const resultTask1 = (a != 30);
 
 let b;
-const resultTask2 = (typeof b === 'string');
+const resultTask2 = (typeof b === 'undefined');
 
 let c;
 const dataTask3 = ['peach', 'plum', 'pear'];
-const resultTask3 = (dataTask3[c] === 'plum');
+const resultTask3 = (dataTask3[1] === 'plum');
 
 let d;
-const resultTask4 = (d === 'cassiopeia'.length);
+const resultTask4 = (d != 'cassiopeia'.length);
 
 let e;
-const resultTask5 = (e % 5 === 3);
+const resultTask5 = (e % 5 != 3);
 
 /* =====================
 
