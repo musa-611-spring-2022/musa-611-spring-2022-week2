@@ -112,20 +112,20 @@ Start code
 
 ===================== */
 
-//L.marker([39.904521142082466, -75.16981764984494]).bindTooltip('Xfinity Live').addTo(foodMap);
+// L.marker([39.904521142082466, -75.16981764984494]).bindTooltip('Xfinity Live').addTo(foodMap);
 // L.marker([39.95530344603284, -75.21229148300758]).bindTooltip('Saad\'s Halal').addTo(foodMap);
 // L.marker([39.94981724617297, -75.15282438106753]).bindTooltip('Morimoto').addTo(foodMap);
 
-function addPlace(map, lat, lng, name) {L.marker([lat, lng]).bindTooltip(name).addTo(map);}
+function addPlace(map, lat, lng, name) { L.marker([lat, lng]).bindTooltip(name).addTo(map); }
 
-addPlace(foodMap, 39.904521142082466, -75.16981764984494, 'Xfinity Live')
-addPlace(foodMap, 39.95530344603284, -75.21229148300758, 'Saad\'s Halal')
-addPlace(foodMap, 39.94981724617297, -75.15282438106753, 'Morimoto')
+addPlace(foodMap, 39.904521142082466, -75.16981764984494, 'Xfinity Live');
+addPlace(foodMap, 39.95530344603284, -75.21229148300758, 'Saad\'s Halal');
+addPlace(foodMap, 39.94981724617297, -75.15282438106753, 'Morimoto');
 
 
-addPlace(playMap, 39.901440143599004, -75.17176491431411, 'Well\s Fargo Center')
-addPlace(playMap, 39.98718487420416, -75.1069129772905, 'Philadelphia Rock Gyms')
-addPlace(playMap, 39.952724857335404, -75.16823066389922, 'Les Richards Menswear')
+addPlace(playMap, 39.901440143599004, -75.17176491431411, 'Wells Fargo Center');
+addPlace(playMap, 39.98718487420416, -75.1069129772905, 'Philadelphia Rock Gyms');
+addPlace(playMap, 39.952724857335404, -75.16823066389922, 'Les Richards Menswear');
 
 
 /* =====================
