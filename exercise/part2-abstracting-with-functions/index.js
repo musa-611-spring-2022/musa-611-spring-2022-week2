@@ -53,6 +53,7 @@ map. Your function should take three arguments in this order:
   2. lng,
   3. name.
 
+
 Now, instead of using L.marker directly, use your function to add your places to
 the map.
 
@@ -82,7 +83,7 @@ maps to use custom icons on your markers.
 
 const foodMap = L.map('food-map', {
   center: [39.9522, -75.1639],
-  zoom: 14,
+  zoom: 13,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
@@ -95,7 +96,7 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 
 const playMap = L.map('play-map', {
   center: [39.9522, -75.1639],
-  zoom: 14,
+  zoom: 13,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
@@ -111,8 +112,16 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 Start code
 
 ===================== */
+function addPlace(map, lat, lng, name) {
+  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+}
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+addPlace(foodMap, 39.962608, -75.201407, 'Bart`s Bagels');
+addPlace(foodMap, 39.96745212078295, -75.17611872918877, 'La Cantina Feliz');
+addPlace(foodMap, 39.93782160862926, -75.1580355678981, 'Nourish');
+addPlace(playMap, 39.966827758941626, -75.18268145782991, 'Philadelphia Art Museum');
+addPlace(playMap, 39.96641986701124, -75.12907377048634, 'Penn Treaty Park');
+addPlace(playMap, 39.95362432845429, -75.18020457995564, 'Schuylkill River Trail');
 
 /* =====================
 
