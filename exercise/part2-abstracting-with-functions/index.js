@@ -111,9 +111,16 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 Start code
 
 ===================== */
-
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
-
+/* ### 3. & 4. */
+const addPlace = (map, lat, lon, name) => {
+  L.marker([lat, lon]).bindTooltip(name).addTo(map);
+};
+addPlace(foodMap, 39.93946748830836, -75.15588034546359, 'Lazeez Indian Cuisine');
+addPlace(foodMap, 39.94891061831568, -75.15998250289982, 'Xiandu Thai Fusion Cuisine');
+addPlace(foodMap, 39.949695323213234, -75.153255972355, 'Morimoto Sushi');
+addPlace(playMap, 39.94222347556279, -75.15054476208091, 'Philly Game Shop');
+addPlace(playMap, 39.94671778533936, -75.15231720668906, 'Washington Square Park');
+addPlace(playMap, 39.94535695388852, -75.16275726603352, 'Dirty Franks');
 /* =====================
 
 End code
