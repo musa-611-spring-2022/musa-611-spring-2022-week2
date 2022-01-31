@@ -116,15 +116,15 @@ Start code
 
 
 
-function addPlace(map, lat, lng, name){
+function addPlace(map, lat, lng, name) {
   L.marker([lat, lng]).bindTooltip(name).addTo(map);
 }
-addPlace(foodMap, 39.95263174234887, -75.19261191834924, "Magic Carpet");
-addPlace(foodMap, 39.953399391439405, -75.21027843184216, "tacotacomexican");
-addPlace(foodMap, 39.959274275833465, -75.19413228257484, "Pita Chip");
-addPlace(playMap, 39.94884792993307, -75.21026399921664, "Clark Park");
-addPlace(playMap, 39.97182929225747, -75.11360590503891, "Graffiti Park");
-addPlace(playMap, 39.939907709387356, -75.20442590363464, "Grays Ferry Crescent");
+addPlace(foodMap, 39.95263174234887, -75.19261191834924, 'Magic Carpet');
+addPlace(foodMap, 39.953399391439405, -75.21027843184216, 'tacotacomexican');
+addPlace(foodMap, 39.959274275833465, -75.19413228257484, 'Pita Chip');
+addPlace(playMap, 39.94884792993307, -75.21026399921664, 'Clark Park');
+addPlace(playMap, 39.97182929225747, -75.11360590503891, 'Graffiti Park');
+addPlace(playMap, 39.939907709387356, -75.20442590363464, 'Grays Ferry Crescent');
 
 
 /* =====================
