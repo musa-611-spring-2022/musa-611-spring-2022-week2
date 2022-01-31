@@ -81,8 +81,8 @@ maps to use custom icons on your markers.
 ===================== */
 
 const foodMap = L.map('food-map', {
-  center: [39.9522, -75.1639],
-  zoom: 14,
+  center: [39.9519504,-75.2147567],
+  zoom: 15,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
@@ -94,8 +94,8 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 }).addTo(foodMap);
 
 const playMap = L.map('play-map', {
-  center: [39.9522, -75.1639],
-  zoom: 14,
+  center: [39.9441164,-75.1593464],
+  zoom: 15,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
@@ -112,7 +112,41 @@ Start code
 
 ===================== */
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+// Task 1
+//L.marker([39.95560480019599, -75.21211525181066]).bindTooltip("Saad's Halal Restaurant").addTo(foodMap);
+
+// Task 2
+//L.marker([39.94918319343814, -75.21353339732106]).bindTooltip("Queen of Sheba").addTo(foodMap);
+//L.marker([39.94853953180414, -75.2171001787671]).bindTooltip("Lee's Deli").addTo(foodMap);
+
+// Task 3
+function addPlace(map, lat, lng, name) {
+  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+};
+fav_rest = [
+  [39.95560480019599, -75.21211525181066, "Saad's Halal Restaurant"],
+  [39.94918319343814, -75.21353339732106,"Queen of Sheba"],
+  [39.94853953180414, -75.2171001787671,"Lee's Deli"]
+];
+
+var arrayLength = fav_rest.length;
+for (var i = 0; i < arrayLength; i++) {
+  var rest = fav_rest[i];
+  addPlace(foodMap, rest[0], rest[1], rest[2]);
+};
+
+// Task 4
+fav_play = [
+  [39.93637303837176, -75.1552015342476, "Shrek Box"],
+  [39.944211358498464, -75.16763371252104, "Bob and Barbara's Lounge"],
+  [39.95024846560943, -75.16628069091189, "Elixr Coffee Roasters"]
+];
+
+var arrayLength = fav_play.length;
+for (var i = 0; i < arrayLength; i++) {
+  var rest = fav_play[i];
+  addPlace(playMap, rest[0], rest[1], rest[2]);
+};
 
 /* =====================
 
