@@ -43,10 +43,10 @@ finished, save your file and reload the browser. You should see three markers.
 
 Refactor the code from the previous steps to leverage some of the Javascript
 functionality we have been learning about. We will start by reducing the number
-of times we call the L.marker method. We will do this by "abstracting" from the
+of times we call the L.marker method. We will do this by 'abstracting' from the
 concept of a marker with a tooltip to the concept of a place with a name.
 
-Create a function called "addPlace" that will add a marker with a tooltip to a
+Create a function called 'addPlace' that will add a marker with a tooltip to a
 map. Your function should take three arguments in this order:
 
   1. lat,
@@ -113,20 +113,21 @@ Start code
 ===================== */
 
 // Task 1
-// L.marker([39.95560480019599, -75.21211525181066]).bindTooltip("Saad's Halal Restaurant").addTo(foodMap);
+// L.marker([39.95560480019599, -75.21211525181066])
+// .bindTooltip('Saad's Halal Restaurant').addTo(foodMap);
 
 // Task 2
-// L.marker([39.94918319343814, -75.21353339732106]).bindTooltip("Queen of Sheba").addTo(foodMap);
-// L.marker([39.94853953180414, -75.2171001787671]).bindTooltip("Lee's Deli").addTo(foodMap);
+// L.marker([39.94918319343814, -75.21353339732106]).bindTooltip('Queen of Sheba').addTo(foodMap);
+// L.marker([39.94853953180414, -75.2171001787671]).bindTooltip('Lee's Deli').addTo(foodMap);
 
 // Task 3
 function addPlace(map, lat, lng, name) {
   L.marker([lat, lng]).bindTooltip(name).addTo(map);
 }
-favRest = [
-  [39.95560480019599, -75.21211525181066, "Saad's Halal Restaurant"],
-  [39.94918319343814, -75.21353339732106,"Queen of Sheba"],
-  [39.94853953180414, -75.2171001787671,"Lee's Deli"]
+let favRest = [
+  [39.95560480019599, -75.21211525181066, 'Saads Halal Restaurant'],
+  [39.94918319343814, -75.21353339732106, 'Queen of Sheba'],
+  [39.94853953180414, -75.2171001787671, 'Lee's Deli']
 ];
 
 var arrayLength = favRest.length;
@@ -136,10 +137,10 @@ for (var i = 0; i < arrayLength; i++) {
 };
 
 // Task 4
-favPlay = [
-  [39.93637303837176, -75.1552015342476, "Shrek Box"],
-  [39.944211358498464, -75.16763371252104, "Bob and Barbara's Lounge"],
-  [39.95024846560943, -75.16628069091189, "Elixr Coffee Roasters"]
+let favPlay = [
+  [39.93637303837176, -75.1552015342476, 'Shrek Box'],
+  [39.944211358498464, -75.16763371252104, 'Bob and Barbaras Lounge'],
+  [39.95024846560943, -75.16628069091189, 'Elixr Coffee Roasters']
 ];
 
 var arrayLength = favPlay.length;
