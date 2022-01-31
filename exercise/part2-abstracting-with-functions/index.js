@@ -130,7 +130,7 @@ let favRest = [
   [39.94853953180414, -75.2171001787671, 'Lees Deli']
 ];
 
-var arrayLength = favRest.length;
+let arrayLength = favRest.length;
 for (var i = 0; i < arrayLength; i++) {
   var rest = favRest[i];
   addPlace(foodMap, rest[0], rest[1], rest[2]);
@@ -143,7 +143,7 @@ let favPlay = [
   [39.95024846560943, -75.16628069091189, 'Elixr Coffee Roasters']
 ];
 
-var arrayLength = favPlay.length;
+let arrayLength = favPlay.length;
 for (var i = 0; i < arrayLength; i++) {
   var rest = favPlay[i];
   addPlace(playMap, rest[0], rest[1], rest[2]);
