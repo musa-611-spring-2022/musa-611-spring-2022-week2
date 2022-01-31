@@ -127,7 +127,7 @@ function addPlace(map, lat, lng, name) {
 let favRest = [
   [39.95560480019599, -75.21211525181066, 'Saads Halal Restaurant'],
   [39.94918319343814, -75.21353339732106, 'Queen of Sheba'],
-  [39.94853953180414, -75.2171001787671, 'Lee's Deli']
+  [39.94853953180414, -75.2171001787671, 'Lees Deli']
 ];
 
 var arrayLength = favRest.length;
