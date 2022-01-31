@@ -113,7 +113,7 @@ Start code
 ===================== */
 /* ### 3. & 4. */
 const addPlace = (map, lat, lon, name) => {
-  L.marker([myLat, myLon]).bindTooltip(placeName).addTo(mapName);
+  L.marker([lat, lon]).bindTooltip(name).addTo(map);
 };
 addPlace(foodMap, 39.93946748830836, -75.15588034546359, 'Lazeez Indian Cuisine');
 addPlace(foodMap, 39.94891061831568, -75.15998250289982, 'Xiandu Thai Fusion Cuisine');
