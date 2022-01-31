@@ -151,13 +151,17 @@ console.log(color); // ReferenceError
 
 ## Running tests on your code
 
-All of the tests are going to be available to you when you are modifying your code on your computer. You can run those tests yourself. This is how you might do that:
+All of the tests are going to be available to you when you are modifying your code on your computer. You can run those tests yourself. This is how you might do that. First, in one terminal window, run the following to start a web server that will server your code for the tests:
+
+```
+npx http-server --port 8000
+```
+
+Then run the test suite with [Jest](https://jestjs.io/). Jest will run your code in a virtual web browser (called [Puppeteer](https://pptr.dev/)) that connects to the web server you started above:
 
 ```
 npx jest
 ```
-
-However, in order to use the `npx` command you will have to have a program called Node.js installed.
 
 ## Checking your code style
 
