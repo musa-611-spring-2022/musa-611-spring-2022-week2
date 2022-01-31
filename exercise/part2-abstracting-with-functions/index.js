@@ -127,21 +127,21 @@ function addPlace(map, lat, lng, name) {
 let favRest = [
   [39.95560480019599, -75.21211525181066, 'Saads Halal Restaurant'],
   [39.94918319343814, -75.21353339732106, 'Queen of Sheba'],
-  [39.94853953180414, -75.2171001787671, 'Lees Deli']
+  [39.94853953180414, -75.2171001787671, 'Lees Deli'],
 ];
 
 let arrayLength = favRest.length;
 for (let i = 0; i < arrayLength; i++) {
   let rest = favRest[i];
   addPlace(foodMap, rest[0], rest[1], rest[2]);
-};
+}
 
 // Task 4
 let favPlay = [
   [39.93637303837176, -75.1552015342476, 'Shrek Box'],
   [39.944211358498464, -75.16763371252104, 'Bob and Barbaras Lounge'],
-  [39.95024846560943, -75.16628069091189, 'Elixr Coffee Roasters']
-];
+  [39.95024846560943, -75.16628069091189, 'Elixr Coffee Roasters'],
+]
 
 for (let i = 0; i < arrayLength; i++) {
   let play = favPlay[i];
