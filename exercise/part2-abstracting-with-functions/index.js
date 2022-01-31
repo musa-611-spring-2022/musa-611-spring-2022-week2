@@ -82,7 +82,7 @@ maps to use custom icons on your markers.
 
 const foodMap = L.map('food-map', {
   center: [39.9522, -75.1639],
-  zoom: 14,
+  zoom: 13,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
@@ -95,7 +95,7 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 
 const playMap = L.map('play-map', {
   center: [39.9522, -75.1639],
-  zoom: 14,
+  zoom: 13,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
@@ -112,7 +112,27 @@ Start code
 
 ===================== */
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+/* L.marker([39.9503688, -75.1668526]).bindTooltip('Goldie (Center City)').addTo(foodMap); */
+/* L.marker([39.9545169, -75.1732201]).bindTooltip('Baology').addTo(foodMap); */
+/* L.marker([39.9347097, -75.1644148]).bindTooltip('Tiffin').addTo(foodMap); */
+
+
+/* custom icon */
+var customMarker = L.icon({
+  iconUrl: 'https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678111-map-marker-512.png',
+  iconSize:     [50, 50] // size of the icon
+});
+
+function addPlace(map, lat, lng, name){
+  L.marker([lat, lng], {icon: customMarker}).bindTooltip(name).addTo(map)}
+
+addPlace(foodMap, 39.9503688, -75.1668526, 'Goldie (Center City)');
+addPlace(foodMap, 39.9545169, -75.1732201, 'Baology');
+addPlace(foodMap, 39.9347097, -75.1644148, 'Tiffin');
+addPlace(playMap, 39.9434797,-75.1911172, 'Schuylkill River Trail');
+addPlace(playMap, 39.9482321,-75.1854365, 'Fitler Square');
+addPlace(playMap, 39.9484351,-75.203621, 'The Woodlands');
+
 
 /* =====================
 
