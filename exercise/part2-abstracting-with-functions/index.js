@@ -107,7 +107,7 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
   ext: 'png',
 }).addTo(playMap);
 
-function addPlace(map, lat, lng, name){
+/*function addPlace(map, lat, lng, name){
   L.marker([lat,lng]).bindTooltip(name).addTo(map);
 }
 addPlace(foodMap, 39.95263174234887, -75.19261191834924,"Magic Carpet");
