@@ -141,12 +141,12 @@ let favPlay = [
   [39.93637303837176, -75.1552015342476, 'Shrek Box'],
   [39.944211358498464, -75.16763371252104, 'Bob and Barbaras Lounge'],
   [39.95024846560943, -75.16628069091189, 'Elixr Coffee Roasters'],
-]
+];
 
 for (let i = 0; i < arrayLength; i++) {
   let play = favPlay[i];
   addPlace(playMap, play[0], play[1], play[2]);
-};
+}
 
 /* =====================
 
