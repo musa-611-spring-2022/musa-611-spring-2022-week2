@@ -143,7 +143,6 @@ let favPlay = [
   [39.95024846560943, -75.16628069091189, 'Elixr Coffee Roasters']
 ];
 
-let arrayLength = favPlay.length;
 for (var i = 0; i < arrayLength; i++) {
   var rest = favPlay[i];
   addPlace(playMap, rest[0], rest[1], rest[2]);
