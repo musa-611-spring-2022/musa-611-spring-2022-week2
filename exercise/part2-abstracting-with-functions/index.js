@@ -131,8 +131,8 @@ let favRest = [
 ];
 
 let arrayLength = favRest.length;
-for (var i = 0; i < arrayLength; i++) {
-  var rest = favRest[i];
+for (let i = 0; i < arrayLength; i++) {
+  let rest = favRest[i];
   addPlace(foodMap, rest[0], rest[1], rest[2]);
 };
 
@@ -143,9 +143,9 @@ let favPlay = [
   [39.95024846560943, -75.16628069091189, 'Elixr Coffee Roasters']
 ];
 
-for (var i = 0; i < arrayLength; i++) {
-  var rest = favPlay[i];
-  addPlace(playMap, rest[0], rest[1], rest[2]);
+for (let i = 0; i < arrayLength; i++) {
+  let play = favPlay[i];
+  addPlace(playMap, play[0], play[1], play[2]);
 };
 
 /* =====================
