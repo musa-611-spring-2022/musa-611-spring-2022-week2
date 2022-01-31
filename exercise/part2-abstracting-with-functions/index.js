@@ -124,8 +124,8 @@ const customMarker = L.icon({
 });
 
 function addPlace(map, lat, lng, name) {
-  L.marker([lat, lng], { icon: customMarker }).bindTooltip(name).addTo(map) 
-};
+  L.marker([lat, lng], { icon: customMarker }).bindTooltip(name).addTo(map);
+}
 
 addPlace(foodMap, 39.9503688, -75.1668526, 'Goldie (Center City)');
 addPlace(foodMap, 39.9545169, -75.1732201, 'Baology');
