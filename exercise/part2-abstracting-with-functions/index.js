@@ -43,10 +43,10 @@ finished, save your file and reload the browser. You should see three markers.
 
 Refactor the code from the previous steps to leverage some of the Javascript
 functionality we have been learning about. We will start by reducing the number
-of times we call the L.marker method. We will do this by "abstracting" from the
+of times we call the L.marker method. We will do this by 'abstracting' from the
 concept of a marker with a tooltip to the concept of a place with a name.
 
-Create a function called "addPlace" that will add a marker with a tooltip to a
+Create a function called 'addPlace' that will add a marker with a tooltip to a
 map. Your function should take three arguments in this order:
 
   1. lat,
@@ -81,8 +81,8 @@ maps to use custom icons on your markers.
 ===================== */
 
 const foodMap = L.map('food-map', {
-  center: [39.9522, -75.1639],
-  zoom: 14,
+  center: [39.9519504, -75.2147567],
+  zoom: 15,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
@@ -94,8 +94,8 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 }).addTo(foodMap);
 
 const playMap = L.map('play-map', {
-  center: [39.9522, -75.1639],
-  zoom: 14,
+  center: [39.9441164, -75.1593464],
+  zoom: 15,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
@@ -112,7 +112,41 @@ Start code
 
 ===================== */
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+// Task 1
+// L.marker([39.95560480019599, -75.21211525181066])
+// .bindTooltip('Saad's Halal Restaurant').addTo(foodMap);
+
+// Task 2
+// L.marker([39.94918319343814, -75.21353339732106]).bindTooltip('Queen of Sheba').addTo(foodMap);
+// L.marker([39.94853953180414, -75.2171001787671]).bindTooltip('Lee's Deli').addTo(foodMap);
+
+// Task 3
+function addPlace(map, lat, lng, name) {
+  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+}
+let favRest = [
+  [39.95560480019599, -75.21211525181066, 'Saads Halal Restaurant'],
+  [39.94918319343814, -75.21353339732106, 'Queen of Sheba'],
+  [39.94853953180414, -75.2171001787671, 'Lees Deli'],
+];
+
+let arrayLength = favRest.length;
+for (let i = 0; i < arrayLength; i++) {
+  let rest = favRest[i];
+  addPlace(foodMap, rest[0], rest[1], rest[2]);
+}
+
+// Task 4
+let favPlay = [
+  [39.93637303837176, -75.1552015342476, 'Shrek Box'],
+  [39.944211358498464, -75.16763371252104, 'Bob and Barbaras Lounge'],
+  [39.95024846560943, -75.16628069091189, 'Elixr Coffee Roasters'],
+];
+
+for (let i = 0; i < arrayLength; i++) {
+  let play = favPlay[i];
+  addPlace(playMap, play[0], play[1], play[2]);
+}
 
 /* =====================
 
