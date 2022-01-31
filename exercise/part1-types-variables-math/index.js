@@ -20,7 +20,8 @@ let c = 1;
 const dataTask3 = ['peach', 'plum', 'pear'];
 const resultTask3 = (dataTask3[c] === 'plum');
 
-let d ='cassiopeia'.length;
+let d = 'cassiopeia'.length;
+
 const resultTask4 = (d === 'cassiopeia'.length);
 
 let e = 18;
