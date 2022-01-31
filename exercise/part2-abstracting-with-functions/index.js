@@ -117,20 +117,16 @@ L.marker([39.93946748830836, -75.15588034546359]).bindTooltip('Lazeez Indian Cui
 L.marker([39.94891061831568, -75.15998250289982]).bindTooltip('Xiandu Thai Fusion Cuisine').addTo(foodMap);
 L.marker([39.949695323213234, -75.153255972355]).bindTooltip('Morimoto Sushi').addTo(foodMap);
 */
-
-
 /* ### 3. & 4. */
-const addPlace = (myLat, myLon, placeName, mapName) =>{
+const addPlace = (myLat, myLon, placeName, mapName) => {
   L.marker([myLat, myLon]).bindTooltip(placeName).addTo(mapName);
-}
-
-addPlace(39.93946748830836,-75.15588034546359, 'Lazeez Indian Cuisine', foodMap)
-addPlace(39.94891061831568,-75.15998250289982, 'Xiandu Thai Fusion Cuisine', foodMap)
-addPlace(39.949695323213234,-75.153255972355, 'Morimoto Sushi', foodMap)
-
-addPlace(39.94222347556279, -75.15054476208091, 'Philly Game Shop', playMap)
-addPlace(39.94671778533936, -75.15231720668906, 'Washington Square Park', playMap)
-addPlace(39.94535695388852, -75.16275726603352, 'Dirty Franks', playMap)
+};
+addPlace(39.93946748830836, -75.15588034546359, 'Lazeez Indian Cuisine', foodMap);
+addPlace(39.94891061831568, -75.15998250289982, 'Xiandu Thai Fusion Cuisine', foodMap);
+addPlace(39.949695323213234, -75.153255972355, 'Morimoto Sushi', foodMap);
+addPlace(39.94222347556279, -75.15054476208091, 'Philly Game Shop', playMap);
+addPlace(39.94671778533936, -75.15231720668906, 'Washington Square Park', playMap);
+addPlace(39.94535695388852, -75.16275726603352, 'Dirty Franks', playMap);
 /* =====================
 
 End code
