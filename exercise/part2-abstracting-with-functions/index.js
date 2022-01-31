@@ -118,20 +118,20 @@ Start code
 
 
 /* custom icon */
-var customMarker = L.icon({
+const customMarker = L.icon( {
   iconUrl: 'https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678111-map-marker-512.png',
-  iconSize:     [50, 50] // size of the icon
+  iconSize: [50, 50], // size of the icon
 });
 
-function addPlace(map, lat, lng, name){
-  L.marker([lat, lng], {icon: customMarker}).bindTooltip(name).addTo(map)}
+function addPlace(map, lat, lng, name) {
+  L.marker([lat, lng], {icon: customMarker}).bindTooltip(name).addTo(map) };
 
 addPlace(foodMap, 39.9503688, -75.1668526, 'Goldie (Center City)');
 addPlace(foodMap, 39.9545169, -75.1732201, 'Baology');
 addPlace(foodMap, 39.9347097, -75.1644148, 'Tiffin');
-addPlace(playMap, 39.9434797,-75.1911172, 'Schuylkill River Trail');
-addPlace(playMap, 39.9482321,-75.1854365, 'Fitler Square');
-addPlace(playMap, 39.9484351,-75.203621, 'The Woodlands');
+addPlace(playMap, 39.9434797, -75.1911172, 'Schuylkill River Trail');
+addPlace(playMap, 39.9482321, -75.1854365, 'Fitler Square');
+addPlace(playMap, 39.9484351, -75.203621, 'The Woodlands');
 
 
 /* =====================
