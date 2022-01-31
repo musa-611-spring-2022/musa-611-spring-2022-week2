@@ -21,7 +21,7 @@ const dataTask3 = ['peach', 'plum', 'pear'];
 const resultTask3 = (dataTask3[c] === 'plum');
 
 let d = 10;
-const resultTask4 = (d ==='cassiopeia'.length);
+const resultTask4 = (d === 'cassiopeia'.length);
 
 let e = 8;
 const resultTask5 = (e % 5 === 3);
