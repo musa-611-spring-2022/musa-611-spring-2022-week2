@@ -116,7 +116,7 @@ Start code
 
 // task 4
 
-function addPlace(map, lat, lng, name){ 
+function addPlace(map, lat, lng, name) {
   L.marker([lat, lng]).bindTooltip(name).addTo(map);
 }
 
