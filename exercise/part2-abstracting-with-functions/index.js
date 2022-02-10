@@ -126,6 +126,7 @@ addPlace(playMap,39.953040552394, -75.158017800909, 'IDK3');
 addPlace(foodMap,39.95301042232432, -75.15801789999911, 'IDK');
 
 addPlace(foodMap,39.95309042323159, -75.19053510642438, 'Hill College House');
+addPlace(foodMap,39.952402, -75.199396, 'Commons 1920');
 
 
 /* =====================
