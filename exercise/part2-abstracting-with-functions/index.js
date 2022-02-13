@@ -130,7 +130,7 @@ L.marker([39.956901982221076, -75.22472386176756]).bindTooltip('ACME').addTo(foo
 L.marker([39.95545913165758, -75.20113170145406]).bindTooltip('DIM SUM House').addTo(foodMap);
 L.marker([39.95493278571354, -75.19370734686116]).bindTooltip('SAN KEE Noodle').addTo(foodMap);
 
-function C(lat, lng, name) {
+function addPlace(lat, lng, name) {
   L.marker([lat, lng]).bindTooltip(name).addTo(foodMap);
 }
 
@@ -138,7 +138,7 @@ function addFunction(lat,lng,name,map) {
   L.marker([lat, lng],{icon: greenIcon}).bindTooltip(name).addTo(map);
 }
 
-C(39.956901982221076, -75.22472386176756,'ACME')
+addPlace(39.956901982221076, -75.22472386176756,'ACME')
 addFunction(39.956901982221076, -75.22472386176756,'ACME',playMap)
 addFunction(39.95493278571354, -75.19370734686116,'SAN KEE Noodle',playMap)
 addFunction(39.95545913165758, -75.20113170145406,'DIM SUM House',playMap)
