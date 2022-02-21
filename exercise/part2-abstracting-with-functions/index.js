@@ -82,7 +82,7 @@ maps to use custom icons on your markers.
 
 const foodMap = L.map('food-map', {
   center: [39.9522, -75.1639],
-  zoom: 14,
+  zoom: 13,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
@@ -95,7 +95,7 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 
 const playMap = L.map('play-map', {
   center: [39.9522, -75.1639],
-  zoom: 14,
+  zoom: 13,
 });
 
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
@@ -111,8 +111,21 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 Start code
 
 ===================== */
+const addPlace = (map, lat, lng, name) => {
+  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+};
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+addPlace(foodMap, 39.95363848044654, -75.15542870921058, 'EMei Restaurant');
+addPlace(foodMap, 39.95530176339542, -75.19754267369555, 'LaTao&CrabbyCrab');
+addPlace(foodMap, 39.95579760487797, -75.20169724806053, 'Dim Sum House by Jane G');
+
+addPlace(playMap, 39.97210288922859, -75.19628153169741, 'Philadelphia Zoo');
+addPlace(playMap, 39.95305684435142, -75.16359966183659, 'Philadelphia City Hall');
+addPlace(playMap, 39.965323242378865, -75.1807583964075, 'Philadelphia Museum of Art');
+
+
+
+
 
 /* =====================
 
