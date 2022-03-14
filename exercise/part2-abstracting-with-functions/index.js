@@ -139,15 +139,16 @@ const FoodIcon = L.icon({
 });
 
 const PlayIcon = L.icon({
-  iconUrl: 'playicon.png',
+  iconUrl: 'playicon.jpg',
   iconSize: [50, 50], // size of the icon
   iconAnchor: [40, 40], // point of the icon which will correspond to marker's location
   popupAnchor: [-30, -30], // point from which the popup should open relative to the iconAnchor
 });
 
+const iconall = [FoodIcon,PlayIcon];
 
-let addPlace = (map, lat, lng, name) => {
-  L.marker([lat, lng], { icon: FoodIcon }).bindTooltip(name).addTo(map);
+let addPlace = (map, lat, lng, i, name) => {
+  L.marker([lat, lng], { icon: iconall[i] }).bindTooltip(name).addTo(map);
 };
 
 
@@ -158,12 +159,12 @@ function addPlace(map, lat, lng, name) {
 }
 */
 
-addPlace(foodMap, 39.95518350574191, -75.19931575943262, 'Coney Shack');
-addPlace(foodMap, 39.95224022010288, -75.18514258031539, 'World Cafe Live Philadelphia');
-addPlace(foodMap, 39.954899042422674, -75.20009627158234, 'Beilers Doughnuts');
-addPlace(playMap, 39.950927391756565, -75.19337652706486, 'Penn Museum');
-addPlace(playMap, 39.953490023288694, -75.16387447879991, 'Philadelphia City Hall');
-addPlace(playMap, 39.9663895216774, -75.18108946074749, 'Philadelphia Museum of Art');
+addPlace(foodMap, 39.95518350574191, -75.19931575943262, 0, 'Coney Shack');
+addPlace(foodMap, 39.95224022010288, -75.18514258031539, 0, 'World Cafe Live Philadelphia');
+addPlace(foodMap, 39.954899042422674, -75.20009627158234, 0, 'Beilers Doughnuts');
+addPlace(playMap, 39.950927391756565, -75.19337652706486, 1, 'Penn Museum');
+addPlace(playMap, 39.953490023288694, -75.16387447879991, 1, 'Philadelphia City Hall');
+addPlace(playMap, 39.9663895216774, -75.18108946074749, 1, 'Philadelphia Museum of Art');
 /* =====================
 
 End code
