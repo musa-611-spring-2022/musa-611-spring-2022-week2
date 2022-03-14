@@ -145,7 +145,7 @@ const PlayIcon = L.icon({
   popupAnchor: [-30, -30], // point from which the popup should open relative to the iconAnchor
 });
 
-const iconall = [FoodIcon,PlayIcon];
+const iconall = [FoodIcon, PlayIcon];
 
 let addPlace = (map, lat, lng, i, name) => {
   L.marker([lat, lng], { icon: iconall[i] }).bindTooltip(name).addTo(map);
