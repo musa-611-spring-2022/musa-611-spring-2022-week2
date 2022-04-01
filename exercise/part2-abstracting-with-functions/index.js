@@ -81,7 +81,7 @@ maps to use custom icons on your markers.
 ===================== */
 
 const foodMap = L.map('food-map', {
-  center: [39.9522, -75.1639],
+  center: [39.9528078498714, -75.16373020239797],
   zoom: 14,
 });
 
@@ -112,7 +112,20 @@ Start code
 
 ===================== */
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+// edited function
+function addPlace(map, lat, lng, name) {
+  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+}
+
+// add places to food map
+addPlace(foodMap, 39.9612056025082, -75.26197043819059, 'El Cuzcatleco');
+addPlace(foodMap, 39.95537656964604, -75.15670455023785, 'Dim Sum Garden');
+addPlace(foodMap, 39.950426242880816, -75.14403443166617, 'The Angelo Pizza');
+
+// Add places to play map
+addPlace(playMap, 39.94911163195551, -75.182211254623, 'Schuylkill River Park Big Dog Run');
+addPlace(playMap, 39.9314738212532, -75.16625472010256, 'The Dolphin Tavern');
+addPlace(playMap, 39.94432529453501, -75.16764456660655, 'Bob & Barbara\'s Lounge');
 
 /* =====================
 
