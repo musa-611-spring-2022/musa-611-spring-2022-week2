@@ -13,7 +13,7 @@ log to test the results.
 let a = 50;
 const resultTask1 = (a > 30);
 
-let b = "Big B Variable";
+let b = 'Big B Variable';
 const resultTask2 = (typeof b === 'string');
 
 let c = 1;

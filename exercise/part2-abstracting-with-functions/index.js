@@ -118,18 +118,18 @@ L.marker([39.951536, -75.175106]).bindTooltip('Porcini').addTo(foodMap);
 L.marker([39.940636, -75.157440]).bindTooltip('Angelo\'s Pizzeria').addTo(foodMap);
 
 // Function addPlace
-let name = "";
+let name = '';
 let lat = 39.951395;
 let lng = -75.180692;
 let map = playMap;
 
-function addPlace(map,lat,lng,name) {
+function addPlace(lat, lng, name) {
     L.marker([lat,lng]).bindTooltip(name).addTo(map);
 }
 
-addPlace(map,39.95166,-75.1748,"Long In the Tooth");
-addPlace(map,39.965551,-75.181094,"Philadelphia Museum of Art");
-addPlace(map,39.941861,-75.151070, "Repo Records");
+addPlace(39.95166, -75.1748, 'Long In the Tooth');
+addPlace(39.965551, -75.181094, 'Philadelphia Museum of Art');
+addPlace(39.941861, -75.151070, 'Repo Records');
 /* =====================
 
 End code
