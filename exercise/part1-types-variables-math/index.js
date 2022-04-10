@@ -13,7 +13,7 @@ log to test the results.
 let a = 33;
 const resultTask1 = (a > 30);
 
-let b = "Hey";
+let b = 'Hey';
 const resultTask2 = (typeof b === 'string');
 
 let c = 1;
