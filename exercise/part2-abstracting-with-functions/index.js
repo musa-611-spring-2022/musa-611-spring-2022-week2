@@ -112,21 +112,29 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 Start code
 
 ===================== */
+// task 1
+L.marker([39.953392, -75.187945]).bindTooltip('My Apartment').addTo(foodMap);
 
+// task 2
+L.marker([39.95309042323159, -75.19053510642438]).bindTooltip('Hill College House').addTo(foodMap);
+L.marker([39.95549395545588, -75.15801782243038]).bindTooltip('Chinatown').addTo(foodMap);
 
+// task 3
 // task 4
+
 
 function addPlace(map, lat, lng, name) {
   L.marker([lat, lng]).bindTooltip(name).addTo(map);
 }
 
-addPlace(playMap, 39.953090422324, -75.158017899999, 'IDK');
-addPlace(playMap, 39.953090553324, -75.158017100999, 'IDK2');
-addPlace(playMap, 39.953040552394, -75.158017800909, 'IDK3');
-addPlace(foodMap, 39.95301042232432, -75.15801789999911, 'IDK');
+addPlace(foodMap, 39.953090423255159, -75.19053510642558, 'IDK');
 
-addPlace(foodMap, 39.95309042323159, -75.19053510642438, 'Hill College House');
-addPlace(foodMap, 39.952402, -75.199396, 'Commons 1920');
+
+
+
+addPlace(playMap, 39.95309042323159, -75.19053510642438, 'IDK');
+addPlace(playMap, 39.95549395545588, -75.15801782243038, 'IDK2');
+addPlace(playMap, 39.93309055230124, -75.15101782243038, 'IDK3');
 
 
 /* =====================
