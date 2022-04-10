@@ -1,3 +1,4 @@
+/* eslint-disable no-loss-of-precision */
 /* =====================
 
 # Excercise: Abstracting with Functions
@@ -57,6 +58,7 @@ Now, instead of using L.marker directly, use your function to add your places to
 the map.
 
 
+
 ## Task 4: Add your favorite places to play in Philadelphia
 
 Notice that there are TWO maps on the page -- one for favorite places to eat and
@@ -111,8 +113,30 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
 Start code
 
 ===================== */
+// task 1
+L.marker([39.953392, -75.187945]).bindTooltip('My Apartment').addTo(foodMap);
 
-L.marker([39.9522, -75.1639]).bindTooltip('My Location').addTo(foodMap);
+// task 2
+L.marker([39.95309042323159, -75.19053510642438]).bindTooltip('Hill College House').addTo(foodMap);
+L.marker([39.95549395545588, -75.15801782243038]).bindTooltip('Chinatown').addTo(foodMap);
+
+// task 3
+// task 4
+
+
+function addPlace(map, lat, lng, name) {
+  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+}
+
+addPlace(foodMap, 39.953090423255159, -75.19053510642558, 'IDK');
+
+
+
+
+addPlace(playMap, 39.95309042323159, -75.19053510642438, 'IDK');
+addPlace(playMap, 39.95549395545588, -75.15801782243038, 'IDK2');
+addPlace(playMap, 39.93309055230124, -75.15101782243038, 'IDK3');
+
 
 /* =====================
 
